@@ -1,0 +1,1906 @@
+<!doctype html>
+<html lang="uk" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>НТК Коломия · Телебачення, радіо і новини Прикарпаття наживо</title>
+<meta name="description" content="Новини Коломиї та Покуття, пряма трансляція телеканалу НТК і радіо онлайн. Програма ефіру, відеоархів, подкасти, погода в Коломиї.">
+<meta name="theme-color" content="#111814">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="НТК Коломия">
+<meta property="og:title" content="НТК Коломия · Своє. Наживо.">
+<meta property="og:description" content="Телеканал, радіо і новини Коломийщини в одному місці. Дивіться і слухайте з будь-якого куточка світу.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1641125639624-1197fdee779d?auto=format&fit=crop&w=1200&h=630&q=75">
+<meta property="og:locale" content="uk_UA">
+<meta name="twitter:card" content="summary_large_image">
+<script>
+  /* Ранній запуск: тема без «спалаху» та пропуск інтро в межах сесії */
+  (function(r){r.classList.add('js');
+    try{var t=localStorage.getItem('ntk-theme');if(t==='light'||t==='dark')r.dataset.theme=t}catch(e){}
+    try{if(sessionStorage.getItem('ntk-intro'))r.classList.add('no-intro')}catch(e){}
+  })(document.documentElement);
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="preload" as="image" fetchpriority="high"
+  href="https://images.unsplash.com/photo-1641125639624-1197fdee779d?auto=format&fit=crop&w=1920&q=72"
+  imagesrcset="https://images.unsplash.com/photo-1641125639624-1197fdee779d?auto=format&fit=crop&w=960&q=72 960w, https://images.unsplash.com/photo-1641125639624-1197fdee779d?auto=format&fit=crop&w=1600&q=72 1600w, https://images.unsplash.com/photo-1641125639624-1197fdee779d?auto=format&fit=crop&w=2400&q=72 2400w"
+  imagesizes="100vw">
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300..700&family=Unbounded:wght@300..900&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"NewsMediaOrganization","name":"НТК Коломия","alternateName":"НТК","inLanguage":"uk","areaServed":"Коломия, Коломийський район, Івано-Франківська область","address":{"@type":"PostalAddress","addressLocality":"Коломия","addressRegion":"Івано-Франківська область","addressCountry":"UA"},"sameAs":[]}
+</script>
+<style>
+/* =========================================================
+   НТК Коломия · дизайн-система «Віск і сигнал»
+   Барвники писанки: віск, вохра, смерека, червінь, чорнило.
+   --brand-1 / --brand-2 → замініть на фірмові кольори НТК
+   ========================================================= */
+:root{
+  --max:1440px; --gut:clamp(16px,4vw,56px);
+  --ease:cubic-bezier(.16,1,.3,1); --ease-q:cubic-bezier(.25,1,.5,1); --ease-io:cubic-bezier(.76,0,.24,1);
+  --hdr:72px; --player-h:76px; --tick:52px;
+  --f-display:'Unbounded','Geologica',system-ui,sans-serif;
+  --f-text:'Geologica',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --d-ivory:oklch(0.955 0.02 88);
+  --d-ochre:oklch(0.80 0.14 76);
+  --d-green:oklch(0.56 0.10 158);
+  --d-red:oklch(0.60 0.21 30);
+  --d-black:oklch(0.17 0.012 160);
+  --on-photo:oklch(0.97 0.012 88);
+  --on-photo-dim:oklch(0.87 0.015 88);
+  --signal:oklch(0.62 0.225 29);
+  --signal-hi:oklch(0.67 0.225 29);
+  --signal-ink:oklch(0.985 0.008 30);
+  color-scheme:dark;
+  --ink:oklch(0.165 0.012 160);
+  --ink-2:oklch(0.205 0.014 160);
+  --ink-3:oklch(0.25 0.016 160);
+  --wax:oklch(0.95 0.018 88);
+  --wax-dim:oklch(0.80 0.018 88);
+  --wax-faint:oklch(0.66 0.018 88);
+  --line:oklch(0.95 0.02 88 / .11);
+  --line-2:oklch(0.95 0.02 88 / .22);
+  --brand-1:oklch(0.81 0.135 78);
+  --brand-2:oklch(0.70 0.10 160);
+  --c-kol:oklch(0.81 0.135 78);
+  --c-reg:oklch(0.72 0.11 160);
+  --c-ua:oklch(0.74 0.10 240);
+  --c-sport:oklch(0.80 0.15 128);
+  --c-cult:oklch(0.73 0.14 12);
+  --grain:.05;
+}
+[data-theme="light"]{
+  color-scheme:light;
+  --ink:oklch(0.972 0.011 88);
+  --ink-2:oklch(0.94 0.014 88);
+  --ink-3:oklch(0.905 0.016 88);
+  --wax:oklch(0.2 0.016 160);
+  --wax-dim:oklch(0.38 0.016 160);
+  --wax-faint:oklch(0.5 0.014 160);
+  --line:oklch(0.25 0.02 160 / .12);
+  --line-2:oklch(0.25 0.02 160 / .24);
+  --brand-1:oklch(0.56 0.12 68);
+  --brand-2:oklch(0.48 0.09 160);
+  --c-kol:oklch(0.58 0.13 68);
+  --c-reg:oklch(0.5 0.1 160);
+  --c-ua:oklch(0.5 0.12 245);
+  --c-sport:oklch(0.52 0.14 135);
+  --c-cult:oklch(0.55 0.17 15);
+  --grain:.035;
+}
+
+/* ---------- База ---------- */
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:calc(var(--hdr) + 16px)}
+body{margin:0;background:var(--ink);color:var(--wax);font:400 1rem/1.65 var(--f-text);padding-bottom:var(--player-h);overflow-x:clip;-webkit-font-smoothing:antialiased;transition:background-color .5s,color .5s}
+body::after{content:"";position:fixed;inset:0;z-index:150;pointer-events:none;opacity:var(--grain);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;padding:0;-webkit-tap-highlight-color:transparent}
+h1,h2,h3,h4{font-family:var(--f-display);font-weight:700;letter-spacing:-.02em;line-height:1.05;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+:focus-visible{outline:2px solid var(--brand-1);outline-offset:3px;border-radius:6px}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip{position:fixed;top:-80px;left:16px;z-index:1001;background:var(--brand-1);color:var(--d-black);padding:12px 18px;border-radius:999px;font-weight:600;transition:top .3s var(--ease)}
+.skip:focus{top:12px}
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--gut)}
+.ic{width:1.2em;height:1.2em;flex:none}
+.ph{border-bottom:1px dashed currentColor;opacity:.85}
+
+/* ---------- Кнопки ---------- */
+.btn{--bg:transparent;display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:48px;padding:0 1.35em;border-radius:999px;font:600 .95rem/1 var(--f-text);background:var(--bg);white-space:nowrap;transition:transform .5s var(--ease),background-color .3s,border-color .3s,color .3s}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn .ic{width:18px;height:18px}
+.btn--live{--bg:var(--signal);color:var(--signal-ink)}
+.btn--live:hover{--bg:var(--signal-hi)}
+.btn--ghost{border:1px solid oklch(0.97 0.01 88 / .4);color:var(--on-photo)}
+.btn--ghost:hover{background:oklch(0.97 0.01 88 / .1);border-color:oklch(0.97 0.01 88 / .75)}
+.btn--line{border:1px solid var(--line-2);color:var(--wax)}
+.btn--line:hover{border-color:var(--wax)}
+.btn--line[aria-pressed="true"]{background:var(--brand-1);border-color:var(--brand-1);color:var(--d-black)}
+.btn--ink{--bg:var(--d-black);color:var(--d-ivory)}
+.icbtn{width:42px;height:42px;display:inline-grid;place-items:center;border-radius:50%;flex:none;transition:background-color .3s}
+.icbtn:hover{background:color-mix(in oklch,currentColor 13%,transparent)}
+.icbtn .ic{width:20px;height:20px}
+.dot{position:relative;display:inline-block;width:8px;height:8px;border-radius:50%;background:currentColor;flex:none}
+.dot::after{content:"";position:absolute;inset:0;border-radius:50%;background:inherit;animation:pulse 1.8s var(--ease-q) infinite}
+.dot--live{color:var(--signal)}
+@keyframes pulse{0%{transform:scale(1);opacity:.75}100%{transform:scale(3.2);opacity:0}}
+@keyframes fadeup{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ---------- Інтро: писанка, що фарбується шарами ---------- */
+.intro{display:none}
+.js .intro{position:fixed;inset:0;z-index:1000;background:var(--d-black);display:grid;place-items:center;align-content:center;gap:26px;color:var(--d-ivory);clip-path:inset(0 0 0 0);transition:clip-path .95s var(--ease-io)}
+.no-intro .intro{display:none}
+.intro.out{clip-path:inset(0 0 100% 0)}
+.intro__egg{width:clamp(108px,13vw,148px);transition:transform .95s var(--ease-io),opacity .6s}
+.intro__egg svg{width:100%;height:auto;display:block;overflow:visible}
+.intro.out .intro__egg{transform:translateY(-48px) scale(.92);opacity:0}
+.intro__w{font:800 1.5rem/1 var(--f-display);letter-spacing:.01em;text-align:center;opacity:0}
+.intro__w small{display:block;font:500 .7rem/1 var(--f-text);letter-spacing:.2em;text-transform:uppercase;opacity:.6;margin-top:12px}
+.intro.run .intro__w{animation:fadeup .7s .45s var(--ease) forwards}
+.egg-base{fill:var(--d-ivory)}
+.intro.run .egg-base{animation:dye 1.4s linear forwards}
+.egg-l{opacity:0}
+.intro.run .egg-l{animation:lay .22s linear forwards}
+.intro.run .egg-l1{animation-delay:.27s}.intro.run .egg-l2{animation-delay:.58s}.intro.run .egg-l3{animation-delay:.89s}.intro.run .egg-l4{animation-delay:1.2s}
+@keyframes dye{0%,18%{fill:var(--d-ivory)}22%,40%{fill:var(--d-ochre)}44%,62%{fill:var(--d-green)}66%,82%{fill:var(--d-red)}88%,100%{fill:oklch(0.12 0.01 160)}}
+@keyframes lay{to{opacity:1}}
+
+/* ---------- Шапка ---------- */
+.hdr{position:fixed;inset:0 0 auto;z-index:100;color:var(--on-photo);border-bottom:1px solid transparent;transition:transform .6s var(--ease),background-color .4s,color .4s,border-color .4s}
+.hdr.is-solid{background:color-mix(in oklch,var(--ink) 86%,transparent);-webkit-backdrop-filter:saturate(1.4) blur(16px);backdrop-filter:saturate(1.4) blur(16px);color:var(--wax);border-color:var(--line)}
+.hdr.is-hidden{transform:translateY(-101%)}
+.hdr__in{height:var(--hdr);display:flex;align-items:center;gap:clamp(16px,2.2vw,34px)}
+.logo{display:flex;align-items:center;gap:10px;flex:none}
+.logo svg{width:34px;height:34px;color:var(--d-ochre);transition:transform 1.2s var(--ease)}
+.logo:hover svg{transform:rotate(90deg)}
+.logo b{display:block;font:800 1.42rem/1 var(--f-display);letter-spacing:-.02em}
+.logo small{display:block;font:500 .64rem/1 var(--f-text);letter-spacing:.16em;text-transform:uppercase;opacity:.72;margin-top:5px}
+.nav{margin-left:auto}
+.nav ul{display:flex;gap:clamp(14px,1.5vw,26px);list-style:none;margin:0;padding:0}
+.nav a{position:relative;display:block;font-size:.92rem;font-weight:500;padding:6px 0;opacity:.88;transition:opacity .3s}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1.5px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
+.nav a:hover{opacity:1}
+.nav a:hover::after{transform:scaleX(1);transform-origin:left}
+.hdr__act{display:flex;align-items:center;gap:6px}
+.pill-live{display:inline-flex;align-items:center;gap:9px;height:38px;padding:0 15px;border-radius:999px;background:var(--signal);color:var(--signal-ink);font-weight:600;font-size:.86rem;margin-right:4px;transition:background-color .3s}
+.pill-live:hover{background:var(--signal-hi)}
+.burger{display:none!important}
+@media (max-width:1100px){.nav{display:none}.burger{display:inline-grid!important}.hdr__act{margin-left:auto}}
+.menu{position:fixed;inset:0;z-index:99;background:var(--ink);color:var(--wax);padding:calc(var(--hdr) + 28px) var(--gut) calc(var(--player-h) + 24px);display:flex;flex-direction:column;gap:6px;overflow-y:auto;transform:translateY(-100%);visibility:hidden;transition:transform .7s var(--ease),visibility 0s .7s}
+.menu.is-open{transform:none;visibility:visible;transition:transform .7s var(--ease),visibility 0s}
+.menu a.big{font:700 clamp(1.7rem,7.5vw,3rem)/1.15 var(--f-display);letter-spacing:-.03em;padding:6px 0;border-bottom:1px solid var(--line)}
+.menu__foot{margin-top:auto;padding-top:28px;display:flex;flex-wrap:wrap;gap:10px}
+
+/* ---------- Hero: живий ефір ---------- */
+.hero{position:relative;isolation:isolate;min-height:max(660px,calc(100svh - var(--player-h)));display:flex;flex-direction:column;justify-content:flex-end;color:var(--on-photo);background:var(--d-black);overflow:hidden;padding-bottom:var(--tick)}
+.hero__media{position:absolute;inset:0;z-index:-3;overflow:hidden}
+.hero__media img{width:100%;height:100%;object-fit:cover;transform-origin:62% 38%;animation:kb 38s ease-in-out infinite alternate;will-change:transform}
+@keyframes kb{from{transform:scale(1.06)}to{transform:scale(1.2) translate3d(-1.5%,-1%,0)}}
+.hero__fog{position:absolute;inset:-30%;z-index:-2;pointer-events:none;background:radial-gradient(30% 22% at 30% 58%,oklch(0.96 0.01 200 / .2),transparent 70%),radial-gradient(26% 18% at 72% 44%,oklch(0.96 0.01 200 / .15),transparent 70%),radial-gradient(34% 20% at 50% 78%,oklch(0.96 0.01 200 / .13),transparent 70%);animation:fog 34s ease-in-out infinite alternate}
+@keyframes fog{from{transform:translate3d(-6%,0,0)}to{transform:translate3d(6%,-2%,0)}}
+.hero.is-paused .hero__media img,.hero.is-paused .hero__fog{animation-play-state:paused}
+.hero__shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,oklch(0.12 0.012 160 / .62) 0,oklch(0.12 0.012 160 / .12) 22%,oklch(0.12 0.012 160 / .22) 40%,oklch(0.12 0.012 160 / .62) 60%,oklch(0.12 0.012 160 / .94) 100%),linear-gradient(90deg,oklch(0.12 0.012 160 / .55),transparent 65%)}
+@media (max-width:860px){.hero__shade{background:linear-gradient(180deg,oklch(0.12 0.012 160 / .6) 0,oklch(0.12 0.012 160 / .3) 22%,oklch(0.12 0.012 160 / .62) 45%,oklch(0.12 0.012 160 / .9) 75%,oklch(0.12 0.012 160 / .96) 100%)}}
+.hero__lead p,.hero__title{text-shadow:0 2px 18px oklch(0.1 0.01 160 / .45)}
+.hero__scan{position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.5;background:repeating-linear-gradient(0deg,oklch(0.05 0 0 / .07) 0 1px,transparent 1px 3px)}
+.hud{position:absolute;top:calc(var(--hdr) + 14px);left:0;right:0;font:500 .76rem/1 var(--f-text);letter-spacing:.08em;text-transform:uppercase;color:var(--on-photo-dim)}
+.hud .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.hud__l{display:flex;align-items:center;gap:12px}
+.hud__live{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:4px;background:var(--signal);color:var(--signal-ink);font-weight:700;letter-spacing:.14em}
+.hud__vod{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:4px;background:var(--d-ochre);color:var(--d-black);font-weight:700;letter-spacing:.14em}
+.hud__tc{font-variant-numeric:tabular-nums;letter-spacing:.06em}
+.hud__bug{display:flex;align-items:center;gap:8px;font:800 1rem/1 var(--f-display);letter-spacing:-.01em;text-transform:none;opacity:.86}
+.hud__bug svg{width:22px;height:22px;color:var(--d-ochre)}
+@media (max-width:640px){.hud__ch,.hud__bug{display:none}}
+.hero__content{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,360px);grid-template-areas:"title title" "lead card";column-gap:clamp(24px,4vw,64px);row-gap:clamp(22px,3vw,40px);align-items:end;padding-top:calc(var(--hdr) + 80px);padding-bottom:clamp(32px,6vh,64px);transition:opacity .5s var(--ease),transform .8s var(--ease)}
+.hero__title{grid-area:title;font:800 clamp(3.1rem,11.4vw,12.5rem)/.86 var(--f-display);letter-spacing:-.045em}
+.hero__title .ln{display:block;overflow:hidden;padding:.03em 0 .07em}
+.hero__title .ln>span{display:block}
+.hero__title .ln--2{padding-left:.92em}
+.hero__title .thin{font-weight:300;letter-spacing:-.055em}
+.hero__lead{grid-area:lead;max-width:54ch}
+.hero__lead p{font-size:clamp(1.02rem,1.25vw,1.2rem);line-height:1.6;color:var(--on-photo-dim)}
+.hero__ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.hero__ctas .btn{min-height:54px;padding:0 1.6em;font-size:1rem}
+.onair{grid-area:card;display:block;padding:18px 20px 20px;border-radius:18px;background:oklch(0.14 0.012 160 / .58);border:1px solid oklch(0.97 0.01 88 / .14);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);transition:border-color .3s,transform .6s var(--ease)}
+.onair:hover{border-color:oklch(0.97 0.01 88 / .34);transform:translateY(-3px)}
+.onair__k{display:flex;align-items:center;gap:9px;font-size:.78rem;font-weight:500;color:var(--on-photo-dim)}
+.onair__t{display:block;font:700 1.14rem/1.2 var(--f-display);letter-spacing:-.015em;margin:10px 0 4px}
+.onair__next{display:block}
+.onair__time{display:block;font-size:.85rem;color:var(--on-photo-dim);font-variant-numeric:tabular-nums}
+.onair__next{margin-top:12px;font-size:.85rem;color:var(--on-photo-dim)}
+.onair__next b{color:var(--on-photo);font-weight:500}
+.bar{display:block;height:3px;border-radius:3px;background:oklch(0.97 0.01 88 / .18);overflow:hidden;margin-top:14px}
+.bar>i{display:block;height:100%;width:100%;background:var(--signal);border-radius:inherit;transform-origin:left;transform:scaleX(var(--p,0));transition:transform 1s linear}
+@media (max-width:860px){.hero__content{grid-template-columns:1fr;grid-template-areas:"title" "lead" "card"}.hero__title .ln--2{padding-left:0}.onair{max-width:420px}}
+.ticker{position:absolute;left:0;right:0;bottom:0;height:var(--tick);display:flex;align-items:center;background:oklch(0.12 0.012 160 / .84);border-top:1px solid oklch(0.97 0.01 88 / .1);overflow:hidden;z-index:2}
+.ticker__k{flex:none;height:100%;display:flex;align-items:center;gap:9px;padding:0 20px 0 var(--gut);background:var(--d-ochre);color:var(--d-black);font:700 .8rem/1 var(--f-display);letter-spacing:.01em}
+.ticker__k .dot{color:var(--d-red)}
+.ticker__view{flex:1;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 3%,#000 97%,transparent);mask-image:linear-gradient(90deg,transparent,#000 3%,#000 97%,transparent)}
+.ticker__track{display:flex;width:max-content;animation:tick 80s linear infinite}
+.ticker:hover .ticker__track,.ticker:focus-within .ticker__track{animation-play-state:paused}
+.tk{display:flex}
+.tk a{display:inline-flex;align-items:center;gap:14px;padding:0 26px;font-size:.92rem;white-space:nowrap;color:var(--on-photo-dim);transition:color .25s}
+.tk a:hover{color:var(--on-photo)}
+.tk a::before{content:"";width:6px;height:6px;transform:rotate(45deg);background:var(--d-ochre);flex:none}
+@keyframes tick{to{transform:translateX(-50%)}}
+.watchbar{position:absolute;left:var(--gut);right:var(--gut);bottom:calc(var(--tick) + 18px);display:flex;align-items:center;gap:6px;padding:8px;border-radius:18px;background:oklch(0.12 0.012 160 / .72);border:1px solid oklch(0.97 0.01 88 / .12);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);opacity:0;transform:translateY(16px);pointer-events:none;visibility:hidden;transition:opacity .5s var(--ease),transform .8s var(--ease),visibility 0s .5s}
+.wb__live{display:inline-flex;align-items:center;gap:8px;padding:0 10px;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.wb__live .dot{color:var(--signal)}
+.wb__t{flex:1;min-width:0;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--on-photo-dim)}
+.wb__x{min-height:42px;padding:0 1.1em}
+.lower3{position:absolute;left:var(--gut);bottom:calc(var(--tick) + 104px);display:grid;justify-items:start;opacity:0;transform:translateX(-28px);transition:opacity .5s var(--ease),transform .9s var(--ease);pointer-events:none;max-width:calc(100% - 2*var(--gut))}
+.lower3 b{font:700 clamp(1.1rem,2.3vw,1.8rem)/1.1 var(--f-display);letter-spacing:-.02em;background:var(--d-ochre);color:var(--d-black);padding:11px 18px}
+.lower3 span{background:oklch(0.12 0.012 160 / .88);color:var(--on-photo);padding:8px 18px;font-size:.92rem}
+.hero.is-watching .hero__content{opacity:0;transform:translateY(28px);pointer-events:none;visibility:hidden;transition:opacity .5s var(--ease),transform .8s var(--ease),visibility 0s .5s}
+.hero.is-watching .watchbar{opacity:1;transform:none;pointer-events:auto;visibility:visible;transition:opacity .5s .25s var(--ease),transform .8s .25s var(--ease),visibility 0s}
+.hero.is-watching .lower3{opacity:1;transform:none;transition-delay:.55s}
+@media (max-width:640px){.wb__t{display:none}.wb__x span{display:none}.wb__x{width:42px;padding:0}.lower3{bottom:calc(var(--tick) + 92px)}}
+
+/* ---------- Секції ---------- */
+.sec{padding-block:clamp(72px,10vw,140px)}
+.sh{display:flex;align-items:flex-end;justify-content:space-between;gap:18px 32px;flex-wrap:wrap;margin-bottom:clamp(28px,3.4vw,52px)}
+.sh h2{font-size:clamp(2.1rem,5vw,4.2rem);letter-spacing:-.04em;line-height:.98;display:flex;align-items:center;gap:.26em}
+.sh h2 .st{width:.6em;height:.6em;color:var(--brand-1);flex:none}
+.sh__aside{display:flex;align-items:center;gap:14px 22px;flex-wrap:wrap}
+.sh__note{color:var(--wax-faint);font-size:.95rem}
+.more{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.95rem;color:var(--wax-dim);transition:color .3s}
+.more .ic{width:18px;height:18px;transition:transform .5s var(--ease)}
+.more:hover{color:var(--wax)}
+.more:hover .ic{transform:translateX(4px)}
+.wave{display:block;width:100%;height:26px;color:color-mix(in oklch,var(--brand-1) 55%,transparent);overflow:visible}
+.wave .w-line{fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round}
+.wave .w-dots{fill:var(--brand-1);opacity:0;transition:opacity 1s .9s}
+.js .wave .w-line{stroke-dasharray:var(--len);stroke-dashoffset:var(--len);transition:stroke-dashoffset 2.6s var(--ease)}
+.wave.in .w-line{stroke-dashoffset:0}
+.wave.in .w-dots{opacity:1}
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity 1s var(--ease),transform 1.1s var(--ease);transition-delay:calc(var(--i,0) * 80ms)}
+.js .rv.in{opacity:1;transform:none}
+.js .hero .hi{opacity:0;transform:translateY(18px);transition:opacity 1s var(--ease),transform 1.1s var(--ease);transition-delay:var(--d,0s)}
+.is-ready .hero .hi{opacity:1;transform:none}
+.js .hero__title .ln>span{transform:translateY(108%);transition:transform 1.3s var(--ease)}
+.is-ready .hero__title .ln>span{transform:none}
+.is-ready .hero__title .ln--2>span{transition-delay:.11s}
+.tag{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:600;letter-spacing:.01em;color:var(--wax)}
+.tag::before{content:"";width:7px;height:7px;border-radius:1.5px;transform:rotate(45deg);background:var(--c,var(--brand-1));flex:none}
+.meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;font-size:.84rem;color:var(--wax-faint)}
+
+/* ---------- Новини ---------- */
+.news__grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(16px,2vw,28px)}
+.lead-story{grid-column:span 8;position:relative;border-radius:22px;overflow:hidden;min-height:clamp(440px,46vw,660px);display:flex;align-items:flex-end;color:var(--on-photo);isolation:isolate;background:var(--d-black)}
+.lead-story img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform 1.6s var(--ease)}
+.lead-story::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,transparent 28%,oklch(0.12 0.012 160 / .9) 100%)}
+.lead-story:hover img{transform:scale(1.045)}
+.lead-story__body{padding:clamp(22px,3vw,44px);max-width:800px}
+.lead-story h3{font-size:clamp(1.5rem,2.6vw,2.4rem);line-height:1.06;letter-spacing:-.035em;margin:16px 0 14px}
+.lead-story h3 a::after{content:"";position:absolute;inset:0}
+.lead-story p{color:var(--on-photo-dim);max-width:62ch}
+.lead-story .meta{color:var(--on-photo-dim)}
+.lead-story .tag{color:var(--on-photo)}
+.lead-story__foot{margin-top:18px}
+.badge-video{display:inline-flex;align-items:center;gap:6px;padding:5px 11px 5px 8px;border-radius:999px;background:oklch(0.97 0.01 88 / .16);font-size:.78rem;font-weight:600;color:var(--on-photo);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.badge-video .ic{width:14px;height:14px}
+.feed{grid-column:span 4;display:flex;flex-direction:column;min-width:0}
+.feed__head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.feed__head h3{font-size:1.15rem;display:flex;align-items:center;gap:10px}
+.feed__head span{font-size:.84rem;color:var(--wax-faint)}
+.chips{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding:14px 0 8px}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;height:34px;padding:0 13px;border-radius:999px;border:1px solid var(--line-2);font-size:.82rem;font-weight:500;color:var(--wax-dim);display:inline-flex;align-items:center;gap:7px;transition:background-color .3s,color .3s,border-color .3s}
+.chip:hover{border-color:var(--wax-dim);color:var(--wax)}
+.chip[aria-pressed="true"]{background:var(--wax);color:var(--ink);border-color:var(--wax)}
+.chip i{width:7px;height:7px;border-radius:1.5px;transform:rotate(45deg);background:var(--c)}
+.feed__list{list-style:none;margin:0;padding:0 6px 0 0;flex:1;max-height:clamp(440px,42vw,580px);overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--line-2) transparent}
+.feed__list.swap li{animation:fadeup .6s var(--ease) both;animation-delay:calc(var(--i) * 35ms)}
+.feed__it a{display:grid;grid-template-columns:52px 1fr;gap:5px 12px;padding:15px 0;border-bottom:1px solid var(--line)}
+.feed__it time{grid-row:span 2;font-variant-numeric:tabular-nums;font-size:.86rem;color:var(--wax-faint);padding-top:1px;line-height:1.3}
+.feed__t{font-weight:500;line-height:1.4;transition:color .25s}
+.feed__v{width:.85em;height:.85em;margin-left:6px;vertical-align:-.05em;color:var(--signal)}
+.feed__it a:hover .feed__t{color:var(--brand-1)}
+.feed__empty{padding:28px 0;color:var(--wax-faint)}
+.feed__empty a{color:var(--brand-1);font-weight:600}
+.news__day{grid-column:1/-1;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(16px,2vw,28px);margin-top:clamp(12px,2vw,24px)}
+.dcard{grid-column:span 3;display:flex;flex-direction:column;gap:14px;min-width:0}
+.dcard:first-child{grid-column:span 6}
+.dcard__img{display:block;border-radius:18px;overflow:hidden;aspect-ratio:4/5;background:var(--ink-2)}
+.dcard:first-child .dcard__img{aspect-ratio:16/10}
+.dcard__img img{width:100%;height:100%;object-fit:cover;transition:transform 1.3s var(--ease)}
+.dcard:hover .dcard__img img{transform:scale(1.05)}
+.dcard h3{font:600 clamp(1.05rem,1.35vw,1.28rem)/1.3 var(--f-text);letter-spacing:-.01em}
+.dcard:first-child h3{font:700 clamp(1.25rem,2vw,1.75rem)/1.12 var(--f-display);letter-spacing:-.03em}
+.dcard h3 a{transition:color .25s}
+.dcard h3 a:hover{color:var(--brand-1)}
+@media (max-width:1060px){.lead-story,.feed{grid-column:1/-1}.feed__list{max-height:none}.dcard{grid-column:span 6}.dcard:first-child{grid-column:1/-1}.dcard__img{aspect-ratio:4/3}}
+@media (max-width:1060px) and (min-width:621px){
+  .dcard:first-child{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);grid-template-rows:1fr auto auto 1fr;column-gap:28px;row-gap:12px}
+  .dcard:first-child .dcard__img{grid-row:1/-1;aspect-ratio:4/3}
+  .dcard:first-child .meta{grid-column:2;grid-row:2}
+  .dcard:first-child h3{grid-column:2;grid-row:3}
+}
+@media (max-width:620px){.dcard{grid-column:1/-1}.lead-story{min-height:540px}.lead-story h3{font-size:1.32rem}.lead-story p{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}}
+
+/* ---------- Ефір сьогодні ---------- */
+.tabs{display:inline-flex;padding:4px;border-radius:999px;background:var(--ink-2);border:1px solid var(--line)}
+.tab{height:42px;padding:0 20px;border-radius:999px;font-weight:600;font-size:.92rem;color:var(--wax-dim);display:inline-flex;align-items:center;gap:8px;transition:background-color .35s,color .35s}
+.tab[aria-selected="true"]{background:var(--wax);color:var(--ink)}
+.air__top{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(20px,3vw,48px);align-items:stretch}
+.now{position:relative;padding:clamp(24px,3vw,42px);border-radius:26px;background:var(--ink-2);border:1px solid var(--line);overflow:hidden;min-height:320px;display:flex;flex-direction:column;isolation:isolate}
+.now__orn{position:absolute;right:-70px;top:-70px;width:300px;height:300px;color:var(--brand-1);opacity:.07;z-index:-1;animation:spin 90s linear infinite}
+.now__k{display:flex;align-items:center;gap:10px;font-size:.88rem;font-weight:600;color:var(--wax-dim)}
+.now__t{font-size:clamp(1.8rem,3.6vw,3.2rem);letter-spacing:-.04em;line-height:1;margin:18px 0 14px}
+.now__d{color:var(--wax-dim);max-width:46ch;font-size:1.05rem}
+.now__foot{margin-top:auto;padding-top:30px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px}
+.now__time{font-variant-numeric:tabular-nums;font-weight:600}
+.now__foot .bar{flex:1 1 140px;margin:0;background:var(--line-2)}
+.now__left{font-size:.88rem;color:var(--wax-faint)}
+.now.swap>*{animation:fadeup .6s var(--ease) both}
+.next__h{font:600 .88rem/1 var(--f-text);color:var(--wax-faint);margin-bottom:14px}
+.next{list-style:none;margin:0;padding:0}
+.next li{display:grid;grid-template-columns:70px 1fr auto;gap:16px;align-items:center;padding:18px 0;border-bottom:1px solid var(--line)}
+.next li:first-child{border-top:1px solid var(--line)}
+.next time{font:700 1.05rem/1 var(--f-display);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.next b{display:block;font-weight:600;font-size:1.05rem;line-height:1.3}
+.next span{font-size:.88rem;color:var(--wax-faint)}
+.bell{width:44px;height:44px;border-radius:50%;border:1px solid var(--line-2);display:grid;place-items:center;color:var(--wax-dim);transition:background-color .3s,border-color .3s,color .3s,transform .5s var(--ease)}
+.bell:hover{border-color:var(--wax);color:var(--wax)}
+.bell[aria-pressed="true"]{background:var(--brand-1);border-color:var(--brand-1);color:var(--d-black)}
+.bell .ic{width:19px;height:19px}
+.air__links{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:22px}
+.tl{margin-top:clamp(32px,4vw,56px)}
+.tl__bar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.tl__bar h3{font:600 .95rem/1 var(--f-text);color:var(--wax-dim)}
+.tl__ctrl{display:flex;gap:8px}
+.rbtn{width:42px;height:42px;border-radius:50%;border:1px solid var(--line-2);display:inline-grid;place-items:center;transition:border-color .3s,opacity .3s}
+.rbtn:hover{border-color:var(--wax)}
+.rbtn:disabled{opacity:.3;cursor:default}
+.rbtn .ic{width:18px;height:18px}
+.tl__nowbtn{height:42px;padding:0 16px;border-radius:999px;border:1px solid var(--line-2);font-size:.86rem;font-weight:600;display:inline-flex;align-items:center;gap:8px}
+.tl__nowbtn:hover{border-color:var(--wax)}
+.tl__scroller{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;cursor:grab;padding:0 var(--gut);-webkit-mask-image:linear-gradient(90deg,transparent,#000 var(--gut),#000 calc(100% - var(--gut)),transparent);mask-image:linear-gradient(90deg,transparent,#000 var(--gut),#000 calc(100% - var(--gut)),transparent)}
+.tl__scroller::-webkit-scrollbar{display:none}
+.tl__scroller.dragging{cursor:grabbing}
+.tl__scroller.dragging .tl__b{pointer-events:none}
+.tl__track{position:relative;height:156px}
+.tl__ruler{position:absolute;inset:0 0 auto;height:28px;border-bottom:1px solid var(--line)}
+.tl__ruler span{position:absolute;top:0;height:28px;font-size:.74rem;line-height:18px;color:var(--wax-faint);font-variant-numeric:tabular-nums;padding-left:7px;border-left:1px solid var(--line-2)}
+.tl__b{position:absolute;top:42px;height:100px;padding:12px 14px;border-radius:14px;background:var(--ink-2);border:1px solid var(--line);text-align:left;display:flex;flex-direction:column;gap:6px;overflow:hidden;transition:background-color .3s,border-color .3s,opacity .3s}
+.tl__b:hover{border-color:var(--line-2);background:var(--ink-3)}
+.tl__b.is-past{opacity:.5}
+.tl__b.is-past:hover{opacity:.85}
+.tl__b.is-now{border-color:color-mix(in srgb,var(--signal) 70%,transparent);background:color-mix(in srgb,var(--signal) 16%,var(--ink-2))}
+.tl__b.is-sel{box-shadow:inset 0 0 0 2px var(--brand-1)}
+.tl__time{font-size:.74rem;color:var(--wax-faint);font-variant-numeric:tabular-nums;white-space:nowrap}
+.tl__name{font-weight:600;font-size:.92rem;line-height:1.25;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.tl__prog{position:absolute;left:0;bottom:0;height:3px;width:100%;background:var(--signal);transform-origin:left;transform:scaleX(var(--p))}
+.tl__now{position:absolute;top:22px;bottom:0;width:2px;margin-left:-1px;background:var(--signal);z-index:3;pointer-events:none}
+.tl__now::before{content:attr(data-t);position:absolute;top:-4px;left:50%;transform:translate(-50%,-100%);background:var(--signal);color:var(--signal-ink);font-size:.72rem;font-weight:700;padding:3px 7px;border-radius:5px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.tl__mark{position:absolute;top:30px;bottom:4px;width:0;border-left:1.5px dashed var(--brand-1);z-index:2;pointer-events:none}
+.tl__mark span{position:absolute;bottom:0;left:6px;white-space:nowrap;font-size:.7rem;font-weight:600;color:var(--brand-1);writing-mode:vertical-rl;transform:rotate(180deg)}
+@media (max-width:900px){.air__top{grid-template-columns:1fr}}
+
+/* ---------- Відеоархів (каруселі) ---------- */
+.vod{padding-block:clamp(72px,10vw,140px);background:var(--ink-2);border-block:1px solid var(--line)}
+[data-theme="dark"] .vod{background:oklch(0.14 0.011 160)}
+.row{margin-top:clamp(34px,4vw,56px)}
+.row:first-of-type{margin-top:0}
+.row__head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:14px}
+.row__head h3{font-size:clamp(1.15rem,1.9vw,1.55rem);letter-spacing:-.025em}
+.row__nav{display:flex;gap:8px}
+.row__track{display:flex;gap:clamp(10px,1.2vw,16px);overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--gut);padding:8px var(--gut) 20px;list-style:none;margin:0;scrollbar-width:none}
+.row__track::-webkit-scrollbar{display:none}
+.row__track>li{flex:none;scroll-snap-align:start}
+.vcard{display:block;width:clamp(250px,25vw,370px);text-align:left;color:var(--wax)}
+.vcard__img{position:relative;display:block;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:var(--ink-3);transition:transform .7s var(--ease),box-shadow .7s var(--ease)}
+.vcard__img img{width:100%;height:100%;object-fit:cover;transition:transform 1.3s var(--ease)}
+.vcard__img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,oklch(0.1 0.01 160 / .78))}
+.vcard__play{position:absolute;left:50%;top:50%;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;background:var(--signal);color:var(--signal-ink);display:grid;place-items:center;transform:scale(.6);opacity:0;transition:transform .6s var(--ease),opacity .35s;z-index:1}
+.vcard__play .ic{width:22px;height:22px;margin-left:3px}
+.vcard:hover .vcard__img,.vcard:focus-visible .vcard__img{transform:translateY(-5px);box-shadow:0 22px 44px -22px oklch(0 0 0 / .75)}
+.vcard:hover .vcard__img img{transform:scale(1.07)}
+.vcard:hover .vcard__play,.vcard:focus-visible .vcard__play{opacity:1;transform:scale(1)}
+.vcard__dur{position:absolute;right:10px;bottom:10px;z-index:1;font-size:.74rem;font-weight:600;padding:3px 7px;border-radius:6px;background:oklch(0.1 0.01 160 / .78);color:var(--on-photo);font-variant-numeric:tabular-nums}
+.vcard__new{position:absolute;left:10px;top:10px;z-index:1;font-size:.68rem;font-weight:700;padding:4px 8px;border-radius:6px;background:var(--d-ochre);color:var(--d-black);letter-spacing:.08em;text-transform:uppercase}
+.vcard__t{display:block;margin-top:12px;font-weight:600;line-height:1.32}
+.vcard__m{display:block;font-size:.84rem;color:var(--wax-faint);margin-top:3px}
+.vcard.is-active .vcard__img{box-shadow:0 0 0 2px var(--brand-1)}
+.vcard--top{display:flex;align-items:flex-end;width:clamp(250px,27vw,390px)}
+.vcard__num{flex:none;font:900 clamp(6.2rem,10vw,9.6rem)/.74 var(--f-display);letter-spacing:-.08em;color:transparent;-webkit-text-stroke:1.5px var(--wax-faint);margin-right:-.14em;transition:-webkit-text-stroke-color .4s}
+.vcard--top:hover .vcard__num{-webkit-text-stroke-color:var(--brand-1)}
+.vcard--top .vcard__img{flex:1;aspect-ratio:3/4}
+.vcard__ov{position:absolute;left:14px;right:14px;bottom:14px;z-index:1;font-weight:600;font-size:.95rem;line-height:1.28;color:var(--on-photo)}
+.vcard--top .vcard__dur{top:10px;bottom:auto}
+.jaw{display:grid;grid-template-rows:0fr;transition:grid-template-rows .75s var(--ease)}
+.jaw.is-open{grid-template-rows:1fr}
+.jaw>div{overflow:hidden;min-height:0}
+.jaw__card{margin:6px var(--gut) 8px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);border-radius:22px;overflow:hidden;background:var(--ink);border:1px solid var(--line);position:relative}
+.jaw__media{position:relative;min-height:260px;aspect-ratio:16/9}
+.jaw__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.jaw__body{padding:clamp(22px,3vw,44px);display:flex;flex-direction:column;gap:14px;justify-content:center}
+.jaw__body h4{font-size:clamp(1.4rem,2.5vw,2.2rem);letter-spacing:-.035em;line-height:1.05}
+.jaw__body p.d{color:var(--wax-dim);max-width:52ch}
+.jaw__btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.jaw__x{position:absolute;top:12px;right:12px;background:oklch(0.12 0.012 160 / .6);color:var(--on-photo)}
+@media (max-width:760px){.jaw__card{grid-template-columns:1fr}.jaw__media{min-height:0}}
+
+/* ---------- Передачі та ведучі ---------- */
+.shows__grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(24px,5vw,88px);align-items:start}
+.shows__list{list-style:none;margin:0;padding:0}
+.show{width:100%;display:grid;grid-template-columns:3em 1fr auto;align-items:baseline;gap:12px;padding:clamp(14px,1.5vw,22px) 0;border-bottom:1px solid var(--line);text-align:left;color:var(--wax-faint);transition:color .35s}
+.shows__list li:first-child .show{border-top:1px solid var(--line)}
+.show__n{font-size:.84rem;font-weight:500;font-variant-numeric:tabular-nums;transition:color .35s}
+.show__name{font:700 clamp(1.35rem,2.7vw,2.45rem)/1.06 var(--f-display);letter-spacing:-.04em;transition:transform .7s var(--ease)}
+.show__when{font-size:.84rem;white-space:nowrap}
+.show:hover,.show.is-on{color:var(--wax)}
+.show.is-on .show__name{transform:translateX(12px)}
+.show.is-on .show__n{color:var(--brand-1)}
+.show__more{display:none}
+.pv{position:sticky;top:calc(var(--hdr) + 24px)}
+.pv__fig{position:relative;height:min(76vh,700px);border-radius:26px;overflow:hidden;background:var(--ink-2);margin:0;isolation:isolate}
+.pv__fig img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:opacity .8s var(--ease),transform 1.6s var(--ease)}
+.pv__fig img.out{opacity:0;transform:scale(1.07)}
+.pv__fig::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,transparent 35%,oklch(0.1 0.01 160 / .9))}
+.pv__cap{position:absolute;left:0;right:0;bottom:0;padding:clamp(20px,2.6vw,34px);color:var(--on-photo)}
+.pv__when{font-size:.86rem;color:var(--on-photo-dim);font-weight:500}
+.pv__cap h3{font-size:clamp(1.5rem,2.6vw,2.3rem);letter-spacing:-.035em;margin:8px 0 10px}
+.pv__cap p{color:var(--on-photo-dim);max-width:46ch}
+.pv__cap.swap>*{animation:fadeup .6s var(--ease) both}
+.pv__cap .more{color:var(--on-photo);margin-top:16px}
+.hosts{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.host{display:inline-flex;align-items:center;gap:10px;padding:4px 14px 4px 4px;border-radius:999px;background:oklch(0.97 0.01 88 / .13);font-size:.87rem;font-weight:500}
+.host i{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font:700 .66rem/1 var(--f-display);font-style:normal;background:var(--d-ochre);color:var(--d-black)}
+@media (max-width:900px){
+  .shows__grid{grid-template-columns:1fr}.pv{display:none}.show__when{display:none}
+  .show{grid-template-columns:2.4em 1fr}
+  .show__more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .6s var(--ease)}
+  .show__more>div{overflow:hidden;min-height:0}
+  li.is-open .show__more{grid-template-rows:1fr}
+  .show__in{padding:4px 0 22px;display:grid;gap:12px}
+  .show__in figure{margin:0;border-radius:18px;overflow:hidden;aspect-ratio:16/10}
+  .show__in img{width:100%;height:100%;object-fit:cover}
+  .show__in p{color:var(--wax-dim)}
+  .show__in .host{background:var(--ink-2)}
+}
+
+/* ---------- Подкасти ---------- */
+.pods__grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.6fr);gap:clamp(28px,5vw,88px);align-items:start}
+.pods__intro{position:sticky;top:calc(var(--hdr) + 24px)}
+.pods__intro h2{font-size:clamp(2.1rem,4.6vw,3.9rem);letter-spacing:-.045em;line-height:.98}
+.pods__intro p{color:var(--wax-dim);margin-top:18px;max-width:40ch}
+.plat{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.plat a{height:40px;padding:0 15px;border-radius:999px;border:1px solid var(--line-2);display:inline-flex;align-items:center;font-size:.85rem;font-weight:500;transition:border-color .3s}
+.plat a:hover{border-color:var(--wax)}
+.pods__list{list-style:none;margin:0;padding:0}
+.pod{display:grid;grid-template-columns:auto 64px minmax(0,1.1fr) minmax(0,1.3fr) auto;align-items:center;gap:clamp(12px,1.8vw,26px);padding:18px 0;border-bottom:1px solid var(--line)}
+.pod:first-child{border-top:1px solid var(--line)}
+.pod__play{width:52px;height:52px;border-radius:50%;background:var(--wax);color:var(--ink);display:grid;place-items:center;transition:transform .5s var(--ease),background-color .3s,color .3s}
+.pod__play:hover{transform:scale(1.08)}
+.pod__play .ic{width:20px;height:20px}
+.pod.is-playing .pod__play{background:var(--signal);color:var(--signal-ink)}
+.pod__cover{width:64px;height:64px;border-radius:12px;overflow:hidden;background:var(--ink-2)}
+.pod__cover img{width:100%;height:100%;object-fit:cover}
+.pod__show{display:block;font-size:.8rem;color:var(--wax-faint);font-weight:500}
+.pod__ep{display:block;font-weight:600;font-size:1.04rem;line-height:1.32;margin-top:2px}
+.pod__wave{position:relative;height:40px;cursor:pointer;color:color-mix(in oklch,var(--wax-faint) 45%,transparent)}
+.pod__wave svg{position:absolute;inset:0;width:100%;height:100%}
+.pod__wave .on{color:var(--brand-1);clip-path:inset(0 calc(100% - var(--p,0%)) 0 0)}
+.pod__dur{font-size:.88rem;color:var(--wax-faint);font-variant-numeric:tabular-nums;min-width:4.5em;text-align:right}
+@media (max-width:1000px){.pods__grid{grid-template-columns:1fr}.pods__intro{position:static}}
+@media (max-width:760px){.pod{grid-template-columns:auto 52px minmax(0,1fr)}.pod__wave,.pod__dur{display:none}.pod__cover{width:52px;height:52px}}
+
+/* ---------- «Повідом новину» ---------- */
+.report{background:var(--d-ochre);color:var(--d-black);padding-block:clamp(72px,10vw,140px);position:relative;overflow:hidden;isolation:isolate}
+.report__grid>div:first-child :focus-visible{outline-color:var(--d-black)}
+.report__orn{position:absolute;right:-8vw;top:-10vw;width:42vw;height:42vw;max-width:620px;max-height:620px;color:oklch(0.17 0.012 160 / .07);z-index:-1;animation:spin 120s linear infinite}
+.report__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,88px);align-items:start}
+.report h2{font:800 clamp(2.5rem,6.2vw,5.6rem)/.94 var(--f-display);letter-spacing:-.05em}
+.report__p{font-size:clamp(1.05rem,1.3vw,1.2rem);max-width:44ch;margin-top:22px}
+.chan{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.chan a{display:inline-flex;align-items:center;gap:9px;height:48px;padding:0 20px;border-radius:999px;border:1.5px solid var(--d-black);font-weight:600;transition:background-color .3s,color .3s}
+.chan a:hover{background:var(--d-black);color:var(--d-ochre)}
+.chan .ic{width:19px;height:19px}
+.report__photo{position:relative;margin:36px 0 0;border-radius:22px;overflow:hidden;aspect-ratio:5/4;max-width:560px;background:var(--d-black)}
+.report__photo img{width:100%;height:100%;object-fit:cover}
+.report__photo figcaption{position:absolute;left:14px;bottom:14px;right:14px;padding:12px 16px;border-radius:14px;background:oklch(0.12 0.012 160 / .82);color:var(--d-ivory);font-size:.9rem;line-height:1.4}
+.report__photo figcaption b{color:var(--d-ochre)}
+.rpanel{--ink:oklch(0.165 0.012 160);--ink-2:oklch(0.215 0.014 160);--ink-3:oklch(0.26 0.016 160);--wax:oklch(0.95 0.018 88);--wax-dim:oklch(0.8 0.018 88);--wax-faint:oklch(0.66 0.018 88);--line:oklch(0.95 0.02 88 / .11);--line-2:oklch(0.95 0.02 88 / .22);--brand-1:oklch(0.81 0.135 78);background:var(--ink);color:var(--wax);border-radius:26px;padding:clamp(22px,3vw,40px);box-shadow:0 40px 80px -40px oklch(0.2 0.05 60 / .55)}
+.rform{display:grid;gap:16px}
+.rform h3{font-size:1.3rem;letter-spacing:-.025em}
+.fld{display:grid;gap:8px;min-width:0}
+.fld>span{font-size:.86rem;font-weight:600;color:var(--wax-dim)}
+.fld>span em{font-style:normal;font-weight:400;color:var(--wax-faint)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:560px){.row2{grid-template-columns:1fr}}
+.inp{width:100%;min-height:50px;padding:12px 16px;border-radius:14px;background:var(--ink-2);border:1px solid var(--line-2);color:var(--wax);font:inherit;transition:border-color .25s,background-color .25s}
+.inp::placeholder{color:var(--wax-faint)}
+.inp:focus{outline:none;border-color:var(--brand-1);background:var(--ink-3)}
+textarea.inp{min-height:118px;resize:vertical;line-height:1.5}
+select.inp{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a49c90' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:18px;padding-right:44px}
+.drop{display:grid;justify-items:center;gap:6px;padding:22px;border:1.5px dashed var(--line-2);border-radius:16px;text-align:center;cursor:pointer;transition:border-color .3s,background-color .3s}
+.drop:hover,.drop.is-over{border-color:var(--brand-1);background:color-mix(in oklch,var(--brand-1) 9%,transparent)}
+.drop:focus-within{outline:2px solid var(--brand-1);outline-offset:3px}
+.drop .ic{width:28px;height:28px;color:var(--brand-1)}
+.drop b{font-weight:600}
+.drop small{color:var(--wax-faint);font-size:.82rem}
+.thumbs{display:flex;flex-wrap:wrap;gap:8px}
+.thumbs:empty{display:none}
+.thumb{position:relative;width:76px;height:76px;border-radius:12px;overflow:hidden;background:var(--ink-3);animation:fadeup .4s var(--ease) both}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.thumb__v{position:absolute;inset:0;display:grid;place-items:center;align-content:center;gap:4px;font-size:.66rem;font-weight:700;color:var(--wax-dim)}
+.thumb button{position:absolute;top:4px;right:4px;width:24px;height:24px;border-radius:50%;background:oklch(0.1 0.01 160 / .8);color:var(--on-photo);display:grid;place-items:center}
+.thumb button .ic{width:14px;height:14px}
+.chk{display:flex;gap:11px;align-items:flex-start;font-size:.9rem;color:var(--wax-dim);cursor:pointer}
+.chk input{width:19px;height:19px;margin:2px 0 0;accent-color:var(--brand-1);flex:none}
+.fine{font-size:.78rem;color:var(--wax-faint);line-height:1.5}
+.rform .btn{justify-self:start}
+.rdone{display:grid;justify-items:start;gap:14px;padding:clamp(10px,3vw,40px) 0;animation:fadeup .7s var(--ease) both}
+.rdone svg.big{width:76px;height:76px;color:var(--brand-1);animation:spin 14s linear infinite}
+.rdone h3{font-size:clamp(1.5rem,2.6vw,2.1rem);letter-spacing:-.035em}
+.rdone p{color:var(--wax-dim);max-width:44ch}
+@media (max-width:900px){.report__grid{grid-template-columns:1fr}}
+
+/* ---------- Погода та корисне ---------- */
+.local__grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(20px,3vw,44px)}
+.wx{position:relative;border-radius:28px;overflow:hidden;color:var(--on-photo);padding:clamp(24px,3.4vw,48px);min-height:540px;display:flex;flex-direction:column;isolation:isolate;background:var(--d-black)}
+.wx__bg{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;opacity:.8;transition:opacity 1s}
+.wx::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(165deg,oklch(0.12 0.012 160 / .2),oklch(0.12 0.012 160 / .55) 45%,oklch(0.12 0.012 160 / .92) 80%)}
+.wx__top{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
+.wx__place{font:700 1.15rem/1.2 var(--f-display);letter-spacing:-.02em}
+.wx__date{font-size:.88rem;color:var(--on-photo-dim);margin-top:4px}
+.wx__live{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:600;color:var(--on-photo-dim);padding:6px 11px;border-radius:999px;background:oklch(0.97 0.01 88 / .12)}
+.wx__main{display:flex;align-items:flex-end;flex-wrap:wrap;gap:8px clamp(14px,2vw,30px);margin-top:auto;padding-top:48px}
+.wx__temp{font:300 clamp(5rem,11vw,9.6rem)/.8 var(--f-display);letter-spacing:-.07em;font-variant-numeric:tabular-nums}
+.wx__icon{width:clamp(54px,6vw,82px);height:clamp(54px,6vw,82px);color:var(--d-ochre)}
+.wx__cond{font-size:1.25rem;font-weight:600;line-height:1.2}
+.wx__feel{color:var(--on-photo-dim);font-size:.92rem;margin-top:4px}
+.wx__stats{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:22px;font-size:.9rem;color:var(--on-photo-dim)}
+.wx__stats span{display:inline-flex;align-items:center;gap:7px}
+.wx__stats .ic{width:17px;height:17px;color:var(--on-photo)}
+.wx__mtn{margin-top:18px;display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:14px;background:oklch(0.97 0.01 88 / .1);font-size:.92rem;line-height:1.4}
+.wx__mtn .ic{width:22px;height:22px;color:var(--d-ochre)}
+.wx__mtn b{font-weight:600}
+.wx__days{display:flex;gap:6px;margin-top:22px;padding-top:20px;border-top:1px solid oklch(0.97 0.01 88 / .16);overflow-x:auto;scrollbar-width:none}
+.wx__day{flex:1 0 62px;display:grid;justify-items:center;gap:6px;font-size:.8rem;text-align:center;color:var(--on-photo-dim)}
+.wx__day:first-child{color:var(--on-photo);font-weight:600}
+.wx__day svg{width:26px;height:26px;color:var(--on-photo)}
+.wx__day b{font-weight:600;font-size:.95rem;color:var(--on-photo)}
+.wx__src{font-size:.72rem;color:var(--on-photo-dim);margin-top:16px;opacity:.85}
+.useful h3{font-size:clamp(1.25rem,1.8vw,1.5rem);letter-spacing:-.025em;margin-bottom:8px}
+.useful>p{color:var(--wax-faint);font-size:.92rem;margin-bottom:12px}
+.uitem{display:grid;grid-template-columns:46px 1fr auto;gap:14px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
+.uitem:first-of-type{border-top:1px solid var(--line)}
+.ui{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;background:var(--ink-2);color:var(--brand-1)}
+.ui .ic{width:21px;height:21px}
+.uitem b{display:block;font-weight:600;line-height:1.3}
+.uitem span{font-size:.87rem;color:var(--wax-faint)}
+.uitem>.ic{width:18px;height:18px;color:var(--wax-faint);transition:transform .5s var(--ease),color .3s}
+a.uitem:hover>.ic{transform:translateX(4px);color:var(--wax)}
+.sos{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.sos a{font:700 .84rem/1 var(--f-display);padding:8px 11px;border-radius:9px;background:color-mix(in oklch,var(--signal) 16%,transparent);transition:background-color .3s}
+.sos a:hover{background:color-mix(in oklch,var(--signal) 30%,transparent)}
+@media (max-width:980px){.local__grid{grid-template-columns:1fr}}
+
+/* ---------- Реклама ---------- */
+.ads__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,88px);align-items:center}
+.map{width:100%;max-width:640px;margin-inline:auto}
+.map svg{width:100%;height:auto;display:block;overflow:visible}
+.map .ring{fill:none;stroke:var(--line-2);stroke-dasharray:2 7}
+.map .ringlbl{fill:var(--wax-faint);font:500 12px var(--f-text)}
+.map .pulse{fill:none;stroke:var(--signal);stroke-width:1.4;transform-box:fill-box;transform-origin:center;opacity:0;animation:radar 5.4s var(--ease-q) infinite}
+.map .pulse.p2{animation-delay:1.8s}.map .pulse.p3{animation-delay:3.6s}
+@keyframes radar{0%{transform:scale(.04);opacity:.85}100%{transform:scale(1);opacity:0}}
+.map .glow{fill:url(#mapGlow)}
+.map .river{fill:none;stroke:var(--c-ua);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;opacity:.75}
+.map .rlbl{fill:var(--c-ua);font:italic 500 12px var(--f-text)}
+.map .mtn{fill:none;stroke:var(--brand-2);stroke-width:1.5;stroke-linejoin:round;opacity:.8}
+.map .mlbl{fill:var(--brand-2);font:600 12px var(--f-text);letter-spacing:.12em;text-transform:uppercase}
+.map .town{cursor:pointer;outline:none}
+.map .town circle{fill:var(--wax-dim);stroke:var(--ink);stroke-width:2;transition:fill .3s}
+.map .town text{fill:var(--wax-dim);font:500 13px var(--f-text);transition:fill .3s}
+.map .town:hover circle,.map .town:focus circle,.map .town.on circle{fill:var(--brand-1)}
+.map .town:hover text,.map .town:focus text,.map .town.on text{fill:var(--wax)}
+.map .town:focus-visible circle{stroke:var(--brand-1);stroke-width:4}
+.map .home text{fill:var(--wax);font:700 15px var(--f-display)}
+.map .home use{color:var(--d-ochre)}
+.map__cap{text-align:center;font-size:.9rem;color:var(--wax-faint);margin-top:6px;min-height:1.6em}
+.map__cap b{color:var(--wax);font-weight:600}
+.ads__lead{font:700 clamp(1.55rem,2.9vw,2.55rem)/1.08 var(--f-display);letter-spacing:-.035em}
+.ads__p{margin-top:18px;color:var(--wax-dim);font-size:1.05rem;max-width:54ch}
+.ads__p b{color:var(--wax);font-weight:600}
+.fmts{list-style:none;margin:28px 0 0;padding:0}
+.fmts li{display:grid;grid-template-columns:2.6em 1fr;gap:12px;padding:15px 0;border-bottom:1px solid var(--line)}
+.fmts li:first-child{border-top:1px solid var(--line)}
+.fmts i{font-style:normal;font-weight:600;font-size:.82rem;line-height:1.7;color:var(--brand-1);font-variant-numeric:tabular-nums}
+.fmts b{display:block;font-weight:600}
+.fmts span{font-size:.9rem;color:var(--wax-faint)}
+.ads__cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.collapse{display:grid;grid-template-rows:0fr;transition:grid-template-rows .7s var(--ease)}
+.collapse.is-open{grid-template-rows:1fr}
+.collapse>div{overflow:hidden;min-height:0}
+.adform{margin-top:22px;padding:clamp(20px,2.4vw,30px);border-radius:22px;background:var(--ink-2);border:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.adform .full{grid-column:1/-1}
+.adform .inp{background:var(--ink)}
+@media (max-width:980px){.ads__grid{grid-template-columns:1fr}}
+@media (max-width:560px){.adform{grid-template-columns:1fr}}
+
+/* ---------- Футер ---------- */
+.ftr{padding-top:clamp(64px,8vw,120px);border-top:1px solid var(--line);overflow:hidden}
+.ftr__big{display:flex;align-items:flex-end;flex-wrap:wrap;gap:0 .1em;font:900 clamp(5.6rem,23vw,21rem)/.78 var(--f-display);letter-spacing:-.075em;margin-bottom:clamp(40px,5vw,72px)}
+.ftr__big svg{width:.6em;height:.6em;color:var(--d-ochre);margin-bottom:.05em;animation:spin 60s linear infinite}
+.ftr__big small{font:500 clamp(.92rem,1.3vw,1.15rem)/1.4 var(--f-text);letter-spacing:0;color:var(--wax-faint);margin:0 0 .5em .5em;max-width:20ch}
+.ftr__grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.5fr;gap:clamp(28px,4vw,56px);padding-bottom:52px}
+.ftr h4{font:600 .8rem/1 var(--f-text);color:var(--wax-faint);margin-bottom:18px;letter-spacing:.04em;text-transform:uppercase}
+.ftr ul{list-style:none;margin:0;padding:0;display:grid;gap:11px}
+.ftr ul a{transition:color .25s}
+.ftr ul a:hover{color:var(--brand-1)}
+.ftr__about{color:var(--wax-dim);max-width:36ch}
+.socials{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}
+.socials a{width:46px;height:46px;border-radius:50%;border:1px solid var(--line-2);display:grid;place-items:center;transition:background-color .3s,color .3s,border-color .3s}
+.socials a:hover{background:var(--wax);color:var(--ink);border-color:var(--wax)}
+.socials .ic{width:20px;height:20px}
+.contact li{display:grid;gap:2px}
+.contact li span{font-size:.8rem;color:var(--wax-faint)}
+.fm{font:700 1.3rem/1.2 var(--f-display);letter-spacing:-.02em}
+.nl{display:flex;gap:8px;margin-top:14px}
+.nl .inp{flex:1;min-width:0}
+.nl .btn{min-height:50px}
+.ftr__nlp{color:var(--wax-dim);font-size:.92rem;margin-top:24px}
+.ftr__bot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px;padding:22px 0 28px;border-top:1px solid var(--line);font-size:.84rem;color:var(--wax-faint)}
+.ftr__bot nav{display:flex;flex-wrap:wrap;gap:8px 20px}
+.ftr__bot a:hover{color:var(--wax)}
+@media (max-width:960px){.ftr__grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.ftr__grid{grid-template-columns:1fr}.nl{flex-direction:column}}
+
+/* ---------- Липкий радіоплеєр ---------- */
+.player{position:fixed;left:0;right:0;bottom:0;z-index:90;height:var(--player-h);background:color-mix(in oklch,var(--ink-2) 92%,transparent);-webkit-backdrop-filter:saturate(1.3) blur(18px);backdrop-filter:saturate(1.3) blur(18px);border-top:1px solid var(--line);color:var(--wax);transition:background-color .5s}
+.player.nudge{animation:nudge .9s var(--ease)}
+@keyframes nudge{0%{transform:none}30%{transform:translateY(-10px)}100%{transform:none}}
+.player__in{height:100%;display:flex;align-items:center;gap:clamp(12px,1.8vw,22px)}
+.player__play{flex:none;width:50px;height:50px;border-radius:50%;background:var(--signal);color:var(--signal-ink);display:grid;place-items:center;transition:transform .5s var(--ease),background-color .3s}
+.player__play:hover{transform:scale(1.07);background:var(--signal-hi)}
+.player__play .ic{width:22px;height:22px}
+.player__cover{flex:none;width:50px;height:50px;border-radius:12px;display:grid;place-items:center;background:var(--d-black);color:var(--d-ochre)}
+.player__cover svg{width:28px;height:28px}
+.player.is-playing .player__cover svg{animation:spin 8s linear infinite}
+.player__meta{min-width:0;flex:1;display:grid;gap:3px}
+.player__st{display:flex;align-items:center;gap:8px;font-size:.78rem;color:var(--wax-faint);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.player__st>span:last-child{overflow:hidden;text-overflow:ellipsis}
+.player__now{font-weight:600;font-size:.97rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:opacity .35s}
+.player__now.fade{opacity:0}
+.eq{display:flex;align-items:flex-end;gap:3px;height:26px;flex:none}
+.eq i{width:3px;height:100%;border-radius:2px;background:var(--brand-1);transform-origin:bottom;transform:scaleY(.14);transition:transform .5s}
+.player.is-playing .eq i{animation:eq var(--d,1s) ease-in-out var(--dl,0s) infinite alternate}
+@keyframes eq{0%{transform:scaleY(.14)}50%{transform:scaleY(.95)}100%{transform:scaleY(.38)}}
+.player__vol{display:flex;align-items:center;gap:8px;color:var(--wax-dim)}
+.player__vol .ic{width:20px;height:20px}
+.player__vol input{width:104px;accent-color:var(--brand-1)}
+.player__btn{height:42px;padding:0 16px;border-radius:999px;border:1px solid var(--line-2);font-size:.86rem;font-weight:600;display:inline-flex;align-items:center;gap:8px;flex:none;transition:border-color .3s}
+.player__btn:hover{border-color:var(--wax)}
+.player__btn .ic{width:17px;height:17px}
+.player__back{display:none}
+.player.is-pod .player__back{display:inline-flex}
+.player.is-pod .player__req{display:none}
+.player__prog{position:absolute;left:0;right:0;top:-1px;height:2px;background:transparent;display:none}
+.player.is-pod .player__prog{display:block}
+.player__prog i{display:block;height:100%;background:var(--brand-1);transform-origin:left;transform:scaleX(var(--p,0))}
+.req{position:absolute;right:var(--gut);bottom:calc(100% + 12px);width:min(370px,calc(100vw - 32px));padding:22px;border-radius:22px;background:var(--ink-2);border:1px solid var(--line-2);box-shadow:0 30px 60px -24px oklch(0 0 0 / .55);display:grid;gap:12px;opacity:0;transform:translateY(12px);pointer-events:none;visibility:hidden;transition:opacity .35s,transform .6s var(--ease),visibility 0s .35s}
+.req.is-open{opacity:1;transform:none;pointer-events:auto;visibility:visible;transition:opacity .35s,transform .6s var(--ease),visibility 0s}
+.req h3{font-size:1.1rem;letter-spacing:-.02em}
+.req p{font-size:.86rem;color:var(--wax-faint)}
+.req .inp{background:var(--ink)}
+@media (max-width:860px){.player__vol{display:none}}
+@media (max-width:640px){:root{--player-h:68px}.player__cover,.player__req .t,.player__back .t{display:none}.player__btn{width:42px;padding:0;justify-content:center}.eq{height:20px;display:none}.player.is-playing .eq{display:flex}.player__play{width:46px;height:46px}}
+
+.toast{position:fixed;left:16px;right:16px;bottom:calc(var(--player-h) + 16px);z-index:120;margin-inline:auto;width:fit-content;max-width:540px;transform:translateY(20px);opacity:0;pointer-events:none;background:var(--wax);color:var(--ink);padding:13px 20px;border-radius:14px;font-size:.92rem;font-weight:500;line-height:1.45;transition:opacity .4s,transform .7s var(--ease);box-shadow:0 18px 40px -16px oklch(0 0 0 / .5)}
+.toast.show{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+  .hero__media img,.hero__fog,.ticker__track,.map .pulse{animation:none!important}
+  .ticker__view{overflow-x:auto}
+  .intro{display:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Перейти до змісту</a>
+
+<!-- Іконки -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-star" viewBox="-12 -12 24 24" fill="currentColor">
+    <path d="M0 0L4.4-1.85L11.5 0L4.4 1.85Z"/><path transform="rotate(45)" opacity=".5" d="M0 0L4.4-1.85L11.5 0L4.4 1.85Z"/>
+    <path transform="rotate(90)" d="M0 0L4.4-1.85L11.5 0L4.4 1.85Z"/><path transform="rotate(135)" opacity=".5" d="M0 0L4.4-1.85L11.5 0L4.4 1.85Z"/>
+    <path transform="rotate(180)" d="M0 0L4.4-1.85L11.5 0L4.4 1.85Z"/><path transform="rotate(225)" opacity=".5" d="M0 0L4.4-1.85L11.5 0L4.4 1.85Z"/>
+    <path transform="rotate(270)" d="M0 0L4.4-1.85L11.5 0L4.4 1.85Z"/><path transform="rotate(315)" opacity=".5" d="M0 0L4.4-1.85L11.5 0L4.4 1.85Z"/>
+  </symbol>
+  <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.6v14.8c0 .8.9 1.3 1.6.9l12-7.4c.6-.4.6-1.4 0-1.8l-12-7.4C7.9 3.3 7 3.8 7 4.6z"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4.5" width="4" height="15" rx="1.2"/><rect x="14" y="4.5" width="4" height="15" rx="1.2"/></symbol>
+  <symbol id="i-vol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="currentColor"/><path d="M15.5 9a4 4 0 0 1 0 6M18.2 6.4a7.6 7.6 0 0 1 0 11.2"/></symbol>
+  <symbol id="i-mute" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="currentColor"/><path d="M16 9.5l5 5M21 9.5l-5 5"/></symbol>
+  <symbol id="i-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 1.5h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-chev-l" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></symbol>
+  <symbol id="i-chev-r" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 8.5h16M4 15.5h16"/></symbol>
+  <symbol id="i-upload" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15.5V4M7 9l5-5 5 5M4 15.5v3.5a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3.5"/></symbol>
+  <symbol id="i-tg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 4.5L3 11.6l6.2 2.1 2.2 6.3 3.3-4.1 4.9 3.6z"/><path d="M9.2 13.7l8.4-6.3"/></symbol>
+  <symbol id="i-viber" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c5 0 8.5 2.6 8.5 7.5S17 18 12 18l-4 3v-3.6C5 16.4 3.5 14 3.5 10.5 3.5 5.6 7 3 12 3z"/><path d="M9.6 7.8c.3 2.8 2.6 5 5.4 5.4l.9-1.4-1.8-1-1 .7a3.8 3.8 0 0 1-1.8-1.8l.7-1-1-1.8z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M6.5 3.5h3l1.5 4.5-2 1.5a11 11 0 0 0 5.5 5.5l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4.5 5.5a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-yt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10 9.2v5.6l4.8-2.8z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M14 8.5h2.5V5H14a3.5 3.5 0 0 0-3.5 3.5V11H8v3.5h2.5V21H14v-6.5h2.4l.6-3.5h-3V9a.5.5 0 0 1 .5-.5z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-tt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3.5v11a3.5 3.5 0 1 1-3.5-3.5M14 3.5c.4 2.6 2.2 4.4 5 4.6"/></symbol>
+  <symbol id="i-mtn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M2.5 19.5l6.5-11 4 6.5 2.5-3.5 6 8z"/></symbol>
+  <symbol id="i-sunrise" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18h16M7 14.5a5 5 0 0 1 10 0M12 4v5M9.5 6.5L12 4l2.5 2.5"/></symbol>
+  <symbol id="i-sunset" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18h16M7 14.5a5 5 0 0 1 10 0M12 4v5M9.5 6.5L12 9l2.5-2.5"/></symbol>
+  <symbol id="i-wind" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 9h11a3 3 0 1 0-3-3M3 15h15a3 3 0 1 1-3 3"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3.5s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-radio" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M8.5 15.5a5 5 0 0 1 0-7M15.5 8.5a5 5 0 0 1 0 7M5.6 18.4a9 9 0 0 1 0-12.8M18.4 5.6a9 9 0 0 1 0 12.8"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/></symbol>
+  <symbol id="i-music" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V6l11-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/></symbol>
+  <symbol id="i-siren" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18v-5a6 6 0 0 1 12 0v5M4 18h16v2.5H4zM12 2.5v2M4.2 5.7l1.4 1.4M19.8 5.7l-1.4 1.4"/></symbol>
+  <symbol id="i-train" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3.5" width="12" height="13" rx="3"/><path d="M6 10.5h12M9 20.5l1.5-4M15 20.5l-1.5-4"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M13 3L5 13.5h6L10 21l8-10.5h-6z"/></symbol>
+  <symbol id="i-pill" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="8.5" width="18" height="7" rx="3.5" transform="rotate(-45 12 12)"/><path d="M9.5 9.5l5 5"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3.5h7l4 4v13h-11z"/><path d="M13.5 3.5v4h4M9 12h6M9 15.5h6"/></symbol>
+  <symbol id="i-ticket" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M3.5 7.5h17v3a1.5 1.5 0 0 0 0 3v3h-17v-3a1.5 1.5 0 0 0 0-3z"/><path d="M14 8v8" stroke-dasharray="2 2"/></symbol>
+  <symbol id="w-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></symbol>
+  <symbol id="w-part" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="3.4"/><path d="M9 2.5V4M2.5 9H4M4.4 4.4l1 1M13.6 4.4l-1 1"/><path d="M8.5 20h8.5a3.5 3.5 0 0 0 0-7 5 5 0 0 0-9.4 1.6A2.8 2.8 0 0 0 8.5 20z"/></symbol>
+  <symbol id="w-cloud" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M7 18.5h10a4 4 0 0 0 0-8 5.5 5.5 0 0 0-10.6 1.6A3.2 3.2 0 0 0 7 18.5z"/></symbol>
+  <symbol id="w-fog" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 12.5h10a4 4 0 0 0 0-8 5.5 5.5 0 0 0-10.4 1.4"/><path d="M3.5 15.5h17M5 19h14"/></symbol>
+  <symbol id="w-rain" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 15h10a4 4 0 0 0 0-8 5.5 5.5 0 0 0-10.6 1.6A3.2 3.2 0 0 0 7 15z"/><path d="M8.5 18.5l-1 2.2M12.5 18.5l-1 2.2M16.5 18.5l-1 2.2"/></symbol>
+  <symbol id="w-snow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 15h10a4 4 0 0 0 0-8 5.5 5.5 0 0 0-10.6 1.6A3.2 3.2 0 0 0 7 15z"/><path d="M8.5 19v.01M12 20.5v.01M15.5 19v.01" stroke-width="2.6"/></symbol>
+  <symbol id="w-storm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 15h10a4 4 0 0 0 0-8 5.5 5.5 0 0 0-10.6 1.6A3.2 3.2 0 0 0 7 15z"/><path d="M12.5 15.5l-2 3.2h3l-2 3.3"/></symbol>
+</svg>
+
+<!-- Інтро: писанка фарбується шар за шаром -->
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro__egg" id="introEgg"></div>
+  <div class="intro__w">НТК<small>Коломия · телебачення і радіо</small></div>
+</div>
+
+<header class="hdr" id="hdr">
+  <div class="hdr__in wrap">
+    <a class="logo" href="#top" aria-label="НТК Коломия, на головну">
+      <svg aria-hidden="true"><use href="#i-star"/></svg>
+      <span><b>НТК</b><small>Коломия</small></span>
+    </a>
+    <nav class="nav" aria-label="Головне меню">
+      <ul>
+        <li><a href="#news">Новини</a></li>
+        <li><a href="#air">Програма</a></li>
+        <li><a href="#video">Відео</a></li>
+        <li><a href="#shows">Передачі</a></li>
+        <li><a href="#podcasts">Подкасти</a></li>
+        <li><a href="#report">Повідом новину</a></li>
+        <li><a href="#ads">Реклама</a></li>
+      </ul>
+    </nav>
+    <div class="hdr__act">
+      <button class="pill-live" id="hdrLive" type="button"><span class="dot"></span>Наживо</button>
+      <button class="icbtn" id="themeBtn" type="button" aria-label="Увімкнути світлу тему"><svg class="ic"><use href="#i-sun"/></svg></button>
+      <button class="icbtn burger" id="burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="menu"><svg class="ic"><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<div class="menu" id="menu" inert>
+  <a class="big" href="#news">Новини</a>
+  <a class="big" href="#air">Програма ефіру</a>
+  <a class="big" href="#video">Відеоархів</a>
+  <a class="big" href="#shows">Передачі</a>
+  <a class="big" href="#podcasts">Подкасти</a>
+  <a class="big" href="#report">Повідом новину</a>
+  <a class="big" href="#weather">Погода</a>
+  <a class="big" href="#ads">Реклама</a>
+  <div class="menu__foot">
+    <a class="btn btn--line" href="#contacts">Контакти</a>
+    <a class="btn btn--line" href="#contacts">Про НТК</a>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top" aria-label="Пряма трансляція">
+  <div class="hero__media">
+    <img id="heroImg"
+      src="https://images.unsplash.com/photo-1641125639624-1197fdee779d?auto=format&fit=crop&w=1920&q=72"
+      srcset="https://images.unsplash.com/photo-1641125639624-1197fdee779d?auto=format&fit=crop&w=960&q=72 960w, https://images.unsplash.com/photo-1641125639624-1197fdee779d?auto=format&fit=crop&w=1600&q=72 1600w, https://images.unsplash.com/photo-1641125639624-1197fdee779d?auto=format&fit=crop&w=2400&q=72 2400w"
+      sizes="100vw" alt="Туман стелиться над смерековими схилами Карпат" fetchpriority="high" decoding="async">
+  </div>
+  <div class="hero__fog" aria-hidden="true"></div>
+  <div class="hero__scan" aria-hidden="true"></div>
+  <div class="hero__shade" aria-hidden="true"></div>
+
+  <div class="hud" aria-hidden="true">
+    <div class="wrap">
+      <div class="hud__l hi" style="--d:.5s">
+        <span class="hud__live" id="hudLive"><span class="dot"></span>Наживо</span>
+        <span class="hud__vod" id="hudVod" hidden>Відео</span>
+        <span class="hud__ch">НТК ТБ</span>
+        <span class="hud__tc" id="tc">00:00:00</span>
+      </div>
+      <div class="hud__bug hi" style="--d:.6s"><svg><use href="#i-star"/></svg>НТК</div>
+    </div>
+  </div>
+
+  <div class="hero__content wrap">
+    <h1 class="hero__title">
+      <span class="sr-only">НТК Коломия: телебачення, радіо і новини Коломийщини. </span>
+      <span class="ln" aria-hidden="true"><span>Своє.</span></span>
+      <span class="ln ln--2" aria-hidden="true"><span class="thin">Наживо.</span></span>
+    </h1>
+    <div class="hero__lead">
+      <p class="hi" style="--d:.35s">Новини Коломиї та Покуття, телеканал і радіо НТК в одному місці. Дивіться і слухайте з будь-якого куточка світу, без реєстрації.</p>
+      <div class="hero__ctas hi" style="--d:.45s">
+        <button class="btn btn--live" id="ctaWatch" type="button"><span class="dot"></span>Дивитися ТБ наживо</button>
+        <button class="btn btn--ghost" id="ctaListen" type="button"><svg class="ic"><use href="#i-radio"/></svg>Слухати радіо</button>
+      </div>
+    </div>
+    <a class="onair hi" href="#air" style="--d:.6s" aria-label="Зараз в ефірі, відкрити програму">
+      <span class="onair__k"><span class="dot dot--live"></span>Зараз в ефірі · НТК ТБ</span>
+      <span class="onair__t" id="oaT">Ранок на НТК</span>
+      <span class="onair__time" id="oaTime">06:00–09:00</span>
+      <span class="bar"><i id="oaBar"></i></span>
+      <span class="onair__next" id="oaNext"></span>
+    </a>
+  </div>
+
+  <div class="lower3" aria-hidden="true"><b id="l3t">Ранок на НТК</b><span id="l3s">НТК ТБ</span></div>
+  <div class="watchbar" role="group" aria-label="Керування трансляцією">
+    <button class="icbtn" id="wbPause" type="button" aria-label="Пауза"><svg class="ic"><use href="#i-pause"/></svg></button>
+    <button class="icbtn" id="wbMute" type="button" aria-label="Вимкнути звук"><svg class="ic"><use href="#i-vol"/></svg></button>
+    <span class="wb__live"><span class="dot"></span><span id="wbLive">Наживо</span></span>
+    <span class="wb__t" id="wbTitle"></span>
+    <button class="icbtn" id="wbFull" type="button" aria-label="На весь екран"><svg class="ic"><use href="#i-full"/></svg></button>
+    <button class="btn btn--ghost wb__x" id="wbExit" type="button"><svg class="ic"><use href="#i-x"/></svg><span>Вийти</span></button>
+  </div>
+
+  <div class="ticker">
+    <span class="ticker__k"><span class="dot"></span>Коротко</span>
+    <div class="ticker__view"><div class="ticker__track" id="tickTrack"></div></div>
+  </div>
+</section>
+
+<!-- ============ ГОЛОВНІ НОВИНИ ============ -->
+<section class="sec" id="news" aria-labelledby="newsH">
+  <div class="wrap">
+    <div class="sh rv">
+      <h2 id="newsH"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg>Головне сьогодні</h2>
+      <div class="sh__aside"><span class="sh__note" id="todayLbl"></span><a class="more" href="#">Усі новини <svg class="ic"><use href="#i-arrow"/></svg></a></div>
+    </div>
+
+    <div class="news__grid">
+      <article class="lead-story rv">
+        <img src="https://images.unsplash.com/photo-1773778580163-85da4ac3f705?auto=format&fit=crop&w=1200&q=72"
+          srcset="https://images.unsplash.com/photo-1773778580163-85da4ac3f705?auto=format&fit=crop&w=640&q=72 640w, https://images.unsplash.com/photo-1773778580163-85da4ac3f705?auto=format&fit=crop&w=1000&q=72 1000w, https://images.unsplash.com/photo-1773778580163-85da4ac3f705?auto=format&fit=crop&w=1500&q=72 1500w"
+          sizes="(max-width:1060px) 100vw, 64vw" alt="Вечірній ярмарок під гірляндами, люди між дерев’яними будиночками" loading="lazy" decoding="async">
+        <div class="lead-story__body">
+          <div class="meta"><span class="tag" style="--c:var(--c-kol)">Коломия</span><span class="badge-video"><svg class="ic"><use href="#i-play"/></svg>Відео · 4:12</span></div>
+          <h3><a href="#">«Зимове місто» в центрі Коломиї: ковзанка, ярмарок майстрів і пункт незламності на 300 людей</a></h3>
+          <p>Відкриття запланували на 6 грудня. Показуємо, де стоятимуть локації, як працюватиме ковзанка під час відключень і хто може торгувати на ярмарку.</p>
+          <div class="meta lead-story__foot"><span>Мар’яна Костюк</span><span>1 год тому</span><span>5 хв читання</span></div>
+        </div>
+      </article>
+
+      <aside class="feed rv" style="--i:1" aria-labelledby="feedH">
+        <div class="feed__head"><h3 id="feedH"><span class="dot dot--live"></span>Стрічка</h3><span>оновлюється наживо</span></div>
+        <div class="chips" id="chips" role="group" aria-label="Фільтр за рубрикою"></div>
+        <ul class="feed__list" id="feedList" aria-live="polite"></ul>
+      </aside>
+
+      <div class="news__day">
+        <article class="dcard rv">
+          <a class="dcard__img" href="#" tabindex="-1" aria-hidden="true"><img src="https://images.unsplash.com/photo-1649797335445-6bba6178e2f2?auto=format&fit=crop&w=1000&q=72" srcset="https://images.unsplash.com/photo-1649797335445-6bba6178e2f2?auto=format&fit=crop&w=640&q=72 640w, https://images.unsplash.com/photo-1649797335445-6bba6178e2f2?auto=format&fit=crop&w=1000&q=72 1000w" sizes="(max-width:1060px) 100vw, 48vw" alt="" loading="lazy" decoding="async"></a>
+          <div class="meta"><span class="tag" style="--c:var(--c-cult)">Культура</span><span>2 год тому</span></div>
+          <h3><a href="#">Музей писанки відкриває вечірні майстер-класи для дітей з родин переселенців</a></h3>
+        </article>
+        <article class="dcard rv" style="--i:1">
+          <a class="dcard__img" href="#" tabindex="-1" aria-hidden="true"><img src="https://images.unsplash.com/photo-1770772858570-d424034311e0?auto=format&fit=crop&w=640&q=72" srcset="https://images.unsplash.com/photo-1770772858570-d424034311e0?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1770772858570-d424034311e0?auto=format&fit=crop&w=800&q=72 800w" sizes="(max-width:620px) 100vw, (max-width:1060px) 50vw, 24vw" alt="" loading="lazy" decoding="async"></a>
+          <div class="meta"><span class="tag" style="--c:var(--c-sport)">Спорт</span><span>3 год тому</span></div>
+          <h3><a href="#">Коломийські борці привезли п’ять медалей з чемпіонату області</a></h3>
+        </article>
+        <article class="dcard rv" style="--i:2">
+          <a class="dcard__img" href="#" tabindex="-1" aria-hidden="true"><img src="https://images.unsplash.com/photo-1658501792244-4c329f29e46c?auto=format&fit=crop&w=640&q=72" srcset="https://images.unsplash.com/photo-1658501792244-4c329f29e46c?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1658501792244-4c329f29e46c?auto=format&fit=crop&w=800&q=72 800w" sizes="(max-width:620px) 100vw, (max-width:1060px) 50vw, 24vw" alt="" loading="lazy" decoding="async"></a>
+          <div class="meta"><span class="tag" style="--c:var(--c-reg)">Регіон</span><span>4 год тому</span></div>
+          <h3><a href="#">У Карпатах випав перший сніг: рятувальники радять відкласти походи на Чорногору</a></h3>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><svg class="wave" aria-hidden="true"></svg></div>
+
+<!-- ============ ЕФІР СЬОГОДНІ ============ -->
+<section class="sec" id="air" aria-labelledby="airH">
+  <div class="wrap">
+    <div class="sh rv">
+      <h2 id="airH"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg>Ефір сьогодні</h2>
+      <div class="tabs" id="airTabs" role="tablist" aria-label="Канал">
+        <button class="tab" role="tab" data-mode="tv" aria-selected="true" tabindex="0" type="button">НТК ТБ</button>
+        <button class="tab" role="tab" data-mode="radio" aria-selected="false" tabindex="-1" type="button">Радіо НТК</button>
+      </div>
+    </div>
+    <div class="air__top rv">
+      <div class="now" id="nowCard" aria-live="polite"></div>
+      <div>
+        <p class="next__h">Далі в ефірі</p>
+        <ul class="next" id="nextList"></ul>
+        <div class="air__links"><a class="more" href="#">Програма на тиждень <svg class="ic"><use href="#i-arrow"/></svg></a><a class="more" href="#video">Архів ефірів <svg class="ic"><use href="#i-arrow"/></svg></a></div>
+      </div>
+    </div>
+  </div>
+  <div class="tl rv">
+    <div class="tl__bar wrap">
+      <h3>Шкала дня · перетягуйте або гортайте</h3>
+      <div class="tl__ctrl">
+        <button class="tl__nowbtn" id="tlNow" type="button"><span class="dot dot--live"></span>Зараз</button>
+        <button class="rbtn" id="tlPrev" type="button" aria-label="Раніше"><svg class="ic"><use href="#i-chev-l"/></svg></button>
+        <button class="rbtn" id="tlNext" type="button" aria-label="Пізніше"><svg class="ic"><use href="#i-chev-r"/></svg></button>
+      </div>
+    </div>
+    <div class="tl__scroller" id="tlScroll"><div class="tl__track" id="tlTrack"></div></div>
+  </div>
+</section>
+
+<!-- ============ ВІДЕОАРХІВ ============ -->
+<section class="vod" id="video" aria-labelledby="vodH">
+  <div class="wrap">
+    <div class="sh rv">
+      <h2 id="vodH"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg>Відеоархів</h2>
+      <div class="sh__aside"><span class="sh__note">Понад 4 000 випусків · новини, документалістика, культура</span><a class="more" href="#">Увесь архів <svg class="ic"><use href="#i-arrow"/></svg></a></div>
+    </div>
+  </div>
+  <div id="vodRows"></div>
+</section>
+
+<!-- ============ ПЕРЕДАЧІ ТА ВЕДУЧІ ============ -->
+<section class="sec" id="shows" aria-labelledby="showsH">
+  <div class="wrap">
+    <div class="sh rv">
+      <h2 id="showsH"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg>Передачі й ведучі</h2>
+      <a class="more" href="#">Усі передачі <svg class="ic"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="shows__grid">
+      <ol class="shows__list rv" id="showList"></ol>
+      <div class="pv rv" style="--i:1" id="pv">
+        <figure class="pv__fig" id="pvFig">
+          <div class="pv__cap" id="pvCap"></div>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ПОДКАСТИ ============ -->
+<section class="sec" id="podcasts" aria-labelledby="podsH" style="padding-top:0">
+  <div class="wrap pods__grid">
+    <div class="pods__intro rv">
+      <h2 id="podsH">Подкасти та ефіри в записі</h2>
+      <p>Розмови, історія міста й голоси Покуття. Слухайте тут, у дорозі чи на улюбленій платформі: плеєр унизу не зупиниться, поки ви гортаєте сайт.</p>
+      <div class="plat"><a href="#">Spotify</a><a href="#">Apple Podcasts</a><a href="#">YouTube Music</a><a href="#">RSS</a></div>
+    </div>
+    <ul class="pods__list rv" style="--i:1" id="podList"></ul>
+  </div>
+</section>
+
+<!-- ============ ПОВІДОМ НОВИНУ ============ -->
+<section class="report" id="report" aria-labelledby="repH">
+  <svg class="report__orn" aria-hidden="true"><use href="#i-star"/></svg>
+  <div class="wrap report__grid">
+    <div class="rv">
+      <h2 id="repH">Бачите новину? Знімайте.</h2>
+      <p class="report__p">Пожежа, ремонт дороги, свято в селі чи несправедливість у черзі: надішліть фото або відео, і черговий редактор зв’яжеться з вами. Найважливіше виходить в ефір того ж дня.</p>
+      <div class="chan">
+        <a href="#"><svg class="ic"><use href="#i-tg"/></svg>Telegram-бот</a>
+        <a href="#"><svg class="ic"><use href="#i-viber"/></svg>Viber</a>
+        <a href="#contacts"><svg class="ic"><use href="#i-phone"/></svg>Подзвонити</a>
+      </div>
+      <figure class="report__photo">
+        <img src="https://images.unsplash.com/photo-1771340589665-cf724a153b46?auto=format&fit=crop&w=1000&q=72" srcset="https://images.unsplash.com/photo-1771340589665-cf724a153b46?auto=format&fit=crop&w=600&q=72 600w, https://images.unsplash.com/photo-1771340589665-cf724a153b46?auto=format&fit=crop&w=1000&q=72 1000w" sizes="(max-width:900px) 100vw, 40vw" alt="Жінка у вишиванці тримає смартфон" loading="lazy" decoding="async">
+        <figcaption><b>Минулого тижня</b> глядачі надіслали 214 повідомлень. 37 з них стали сюжетами в новинах.</figcaption>
+      </figure>
+    </div>
+    <div class="rpanel rv" style="--i:1" id="rpanel">
+      <form class="rform" id="rform" novalidate>
+        <h3>Повідомити редакцію</h3>
+        <label class="fld"><span>Що сталося?</span><textarea class="inp" name="what" required placeholder="Коротко опишіть подію: що, де, коли"></textarea></label>
+        <div class="row2">
+          <label class="fld"><span>Де саме?</span><input class="inp" name="where" list="places" placeholder="Коломия, вул. …"></label>
+          <label class="fld"><span>Коли?</span>
+            <select class="inp" name="when"><option>Щойно</option><option>Сьогодні</option><option>Вчора</option><option>Раніше</option></select>
+          </label>
+        </div>
+        <datalist id="places"><option value="Коломия"><option value="Печеніжин"><option value="Отинія"><option value="Гвіздець"><option value="Заболотів"><option value="Яблунів"><option value="Снятин"><option value="Городенка"><option value="Косів"></datalist>
+        <label class="drop">
+          <input class="sr-only" id="fileIn" type="file" accept="image/*,video/*" multiple>
+          <svg class="ic"><use href="#i-upload"/></svg>
+          <b>Фото або відео</b>
+          <small id="dropHint">Перетягніть сюди або натисніть, щоб обрати · до 10 файлів</small>
+        </label>
+        <div class="thumbs" id="thumbs"></div>
+        <label class="fld"><span>Як з вами зв’язатися <em>(необов’язково)</em></span><input class="inp" name="contact" placeholder="Телефон або @нік у Telegram"></label>
+        <label class="chk"><input type="checkbox" name="anon"> Не згадувати моє ім’я в ефірі</label>
+        <button class="btn btn--live" type="submit"><svg class="ic"><use href="#i-arrow"/></svg>Надіслати в редакцію</button>
+        <p class="fine">Надсилаючи матеріали, ви дозволяєте НТК використати їх в ефірі та на сайті з зазначенням авторства (або анонімно). Ми не передаємо ваші контакти третім особам.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ПОГОДА І КОРИСНЕ ============ -->
+<section class="sec" id="weather" aria-labelledby="locH">
+  <div class="wrap">
+    <div class="sh rv">
+      <h2 id="locH"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg>Коломия сьогодні</h2>
+    </div>
+    <div class="local__grid">
+      <div class="wx rv" id="wx">
+        <img class="wx__bg" id="wxBg" src="https://images.unsplash.com/photo-1691413819265-0e37578fdd8a?auto=format&fit=crop&w=1200&q=70" alt="" loading="lazy" decoding="async">
+        <div class="wx__top">
+          <div><p class="wx__place">Погода в Коломиї</p><p class="wx__date" id="wxDate"></p></div>
+          <span class="wx__live"><span class="dot dot--live"></span>зараз</span>
+        </div>
+        <div class="wx__main">
+          <span class="wx__temp" id="wxTemp">…</span>
+          <svg class="wx__icon" id="wxIcon" aria-hidden="true"><use href="#w-cloud"/></svg>
+          <div><p class="wx__cond" id="wxCond">Завантажуємо прогноз</p><p class="wx__feel" id="wxFeel"></p></div>
+        </div>
+        <div class="wx__stats">
+          <span><svg class="ic"><use href="#i-wind"/></svg>Вітер <b id="wxWind">…</b></span>
+          <span><svg class="ic"><use href="#i-drop"/></svg>Вологість <b id="wxHum">…</b></span>
+          <span><svg class="ic"><use href="#i-sunrise"/></svg><b id="wxRise">…</b></span>
+          <span><svg class="ic"><use href="#i-sunset"/></svg><b id="wxSet">…</b></span>
+        </div>
+        <p class="wx__mtn" id="wxMtn"><svg class="ic"><use href="#i-mtn"/></svg><span>Погода на Говерлі завантажується…</span></p>
+        <div class="wx__days" id="wxDays"></div>
+        <p class="wx__src" id="wxSrc"></p>
+      </div>
+
+      <div class="useful rv" style="--i:1">
+        <h3>Корисне поруч</h3>
+        <p>Те, що шукають найчастіше. Оновлюємо разом з громадою.</p>
+        <div class="uitem">
+          <span class="ui"><svg class="ic"><use href="#i-siren"/></svg></span>
+          <div><b>Екстрені служби</b><div class="sos"><a href="tel:101">101</a><a href="tel:102">102</a><a href="tel:103">103</a><a href="tel:104">104</a><a href="tel:112">112</a></div></div>
+          <span></span>
+        </div>
+        <a class="uitem" href="#"><span class="ui"><svg class="ic"><use href="#i-bolt"/></svg></span><div><b>Графіки відключень</b><span>Черги для Коломийщини на сьогодні</span></div><svg class="ic"><use href="#i-arrow"/></svg></a>
+        <a class="uitem" href="#"><span class="ui"><svg class="ic"><use href="#i-train"/></svg></span><div><b>Потяги зі станції Коломия</b><span>Розклад і затримки</span></div><svg class="ic"><use href="#i-arrow"/></svg></a>
+        <a class="uitem" href="#"><span class="ui"><svg class="ic"><use href="#i-pill"/></svg></span><div><b>Чергові аптеки</b><span>Хто працює цілодобово</span></div><svg class="ic"><use href="#i-arrow"/></svg></a>
+        <a class="uitem" href="#"><span class="ui"><svg class="ic"><use href="#i-doc"/></svg></span><div><b>ЦНАП Коломиї</b><span>Години роботи та електронна черга</span></div><svg class="ic"><use href="#i-arrow"/></svg></a>
+        <a class="uitem" href="#"><span class="ui"><svg class="ic"><use href="#i-ticket"/></svg></span><div><b>Афіша на вихідні</b><span>Концерти, виставки, ярмарки</span></div><svg class="ic"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><svg class="wave" aria-hidden="true"></svg></div>
+
+<!-- ============ РЕКЛАМА ============ -->
+<!-- Цифри охоплення нижче демонстраційні: замініть на актуальні дані медіакіту -->
+<section class="sec" id="ads" aria-labelledby="adsH">
+  <div class="wrap">
+    <div class="sh rv">
+      <h2 id="adsH"><svg class="st" aria-hidden="true"><use href="#i-star"/></svg>Реклама на НТК</h2>
+      <a class="more" href="#">Медіакіт, PDF <svg class="ic"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="ads__grid">
+      <div class="rv">
+        <div class="map" id="map"></div>
+        <p class="map__cap" id="mapCap" aria-live="polite">Наведіть на місто, щоб побачити відстань від студії</p>
+      </div>
+      <div class="rv" style="--i:1">
+        <p class="ads__lead">Вас почують там, де живуть ваші клієнти: від Снятина до Верховини.</p>
+        <p class="ads__p">Телеканал, радіо й сайт НТК працюють як одна редакція. Щотижня нас дивляться й слухають <b>понад 120 тисяч людей</b>, а сайт відкривають <b>300 тисяч разів на місяць</b>, зокрема з Польщі, Італії та Чехії.</p>
+        <ul class="fmts">
+          <li><i>01</i><div><b>Ролик у прайм-тайм</b><span>18:00–21:00, поруч з головними новинами дня</span></div></li>
+          <li><i>02</i><div><b>Радіоролик і джингл</b><span>Записуємо голосами ведучих НТК</span></div></li>
+          <li><i>03</i><div><b>Спонсорство передачі</b><span>Ваш бренд у «Ранку на НТК» чи «Спорті Прикарпаття»</span></div></li>
+          <li><i>04</i><div><b>Спецрепортаж</b><span>Історія вашого бізнесу від нашої знімальної групи</span></div></li>
+          <li><i>05</i><div><b>Пакет «ТБ + Радіо + Онлайн»</b><span>Одна кампанія, три канали, один звіт</span></div></li>
+        </ul>
+        <div class="ads__cta">
+          <button class="btn btn--live" id="adToggle" type="button" aria-expanded="false" aria-controls="adCollapse"><svg class="ic"><use href="#i-arrow"/></svg>Замовити рекламу</button>
+          <a class="btn btn--line" href="#contacts"><svg class="ic"><use href="#i-phone"/></svg>Рекламний відділ</a>
+        </div>
+        <div class="collapse" id="adCollapse"><div>
+          <form class="adform" id="adform" inert>
+            <label class="fld"><span>Ім’я</span><input class="inp" name="name" required autocomplete="name"></label>
+            <label class="fld"><span>Компанія</span><input class="inp" name="company" autocomplete="organization"></label>
+            <label class="fld"><span>Телефон або email</span><input class="inp" name="contact" required></label>
+            <label class="fld"><span>Формат</span><select class="inp" name="format"><option>Ще не знаю, порадьте</option><option>Ролик на ТБ</option><option>Радіо</option><option>Спонсорство</option><option>Спецрепортаж</option><option>Пакет ТБ + Радіо + Онлайн</option></select></label>
+            <label class="fld full"><span>Коротко про задачу</span><textarea class="inp" name="msg" rows="3" placeholder="Що рекламуємо, коли і для кого"></textarea></label>
+            <div class="full"><button class="btn btn--live" type="submit">Надіслати запит</button></div>
+          </form>
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ ФУТЕР ============ -->
+<footer class="ftr" id="contacts">
+  <div class="wrap">
+    <div class="ftr__big" aria-hidden="true"><svg><use href="#i-star"/></svg>НТК<small>Пишемо історію Покуття щодня, наживо.</small></div>
+    <div class="ftr__grid">
+      <div>
+        <p class="ftr__about">НТК Коломия: телеканал, радіо і сайт новин Коломийщини. Розповідаємо про своїх і для своїх, удома й за кордоном.</p>
+        <div class="socials">
+          <a href="#" aria-label="YouTube"><svg class="ic"><use href="#i-yt"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg class="ic"><use href="#i-fb"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg class="ic"><use href="#i-ig"/></svg></a>
+          <a href="#" aria-label="Telegram"><svg class="ic"><use href="#i-tg"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg class="ic"><use href="#i-tt"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Дивитися і слухати</h4>
+        <ul><li><a href="#news">Новини</a></li><li><a href="#top">ТБ наживо</a></li><li><a href="#air">Радіо НТК</a></li><li><a href="#air">Телепрограма на тиждень</a></li><li><a href="#shows">Передачі</a></li><li><a href="#podcasts">Подкасти</a></li></ul>
+      </div>
+      <div>
+        <h4>НТК</h4>
+        <ul><li><a href="#">Про нас</a></li><li><a href="#">Команда</a></li><li><a href="#">Історія НТК</a></li><li><a href="#ads">Реклама і співпраця</a></li><li><a href="#">Вакансії</a></li><li><a href="#">Редакційна політика</a></li></ul>
+      </div>
+      <div>
+        <h4>Контакти</h4>
+        <ul class="contact">
+          <li><span>Радіо</span><b class="fm">FM <span class="ph" data-cfg="fm"></span></b></li>
+          <li><span>Адреса</span><span class="ph" data-cfg="address" style="font-size:1rem;color:var(--wax)"></span></li>
+          <li><span>Телефон редакції</span><a class="ph" data-cfg="phone" href="#"></a></li>
+          <li><span>Email</span><a class="ph" data-cfg="email" href="#"></a></li>
+        </ul>
+        <p class="ftr__nlp">Вечірній лист о 20:00: головне за день у п’яти пунктах.</p>
+        <form class="nl" id="nl"><label class="sr-only" for="nlEmail">Email для розсилки</label><input class="inp" id="nlEmail" type="email" required placeholder="ваш@email" autocomplete="email"><button class="btn btn--live" type="submit">Підписатися</button></form>
+      </div>
+    </div>
+    <div class="ftr__bot">
+      <span>© 2026 НТК Коломия. Прототип редизайну · фото: Unsplash</span>
+      <nav aria-label="Правова інформація"><a href="#">Політика конфіденційності</a><a href="#">Умови використання</a><a href="#">Доступність</a></nav>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ ЛИПКИЙ РАДІОПЛЕЄР ============ -->
+<div class="player" id="player" role="region" aria-label="Радіоплеєр НТК">
+  <span class="player__prog" aria-hidden="true"><i id="plProg"></i></span>
+  <div class="player__in wrap">
+    <button class="player__play" id="plPlay" type="button" aria-label="Слухати радіо наживо"><svg class="ic"><use href="#i-play"/></svg></button>
+    <span class="player__cover" aria-hidden="true"><svg><use href="#i-star"/></svg></span>
+    <div class="player__meta">
+      <p class="player__st" id="plSt"></p>
+      <p class="player__now" id="plNow" aria-live="polite"></p>
+    </div>
+    <span class="eq" id="eq" aria-hidden="true"></span>
+    <label class="player__vol"><svg class="ic" aria-hidden="true"><use href="#i-vol"/></svg><span class="sr-only">Гучність</span><input id="plVol" type="range" min="0" max="100" value="80"></label>
+    <button class="player__btn player__back" id="plBack" type="button"><span class="dot dot--live"></span><span class="t">До ефіру</span></button>
+    <button class="player__btn player__req" id="plReq" type="button" aria-expanded="false" aria-controls="req"><svg class="ic"><use href="#i-music"/></svg><span class="t">Замовити пісню</span></button>
+  </div>
+  <form class="req" id="req" inert>
+    <h3>Замовити пісню</h3>
+    <p id="reqP">Ведучий прочитає привітання в ефірі.</p>
+    <label class="fld"><span>Пісня або виконавець</span><input class="inp" name="song" required placeholder="Наприклад: KALUSH, «Стефанія»"></label>
+    <label class="fld"><span>Привітання <em>(необов’язково)</em></span><textarea class="inp" name="msg" rows="2" placeholder="Кого і з чим вітаємо"></textarea></label>
+    <button class="btn btn--live" type="submit">Надіслати ведучому</button>
+  </form>
+  <audio id="plAudio" preload="none"></audio>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(() => {
+'use strict';
+const d = document, root = d.documentElement;
+const $ = (s, c = d) => c.querySelector(s), $$ = (s, c = d) => [...c.querySelectorAll(s)];
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const store = { get: k => { try { return localStorage.getItem(k) } catch (e) { return null } }, set: (k, v) => { try { localStorage.setItem(k, v) } catch (e) {} } };
+const sess = { get: k => { try { return sessionStorage.getItem(k) } catch (e) { return null } }, set: (k, v) => { try { sessionStorage.setItem(k, v) } catch (e) {} } };
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+/* ================= НАЛАШТУВАННЯ (замініть плейсхолдери) ================= */
+const CONFIG = {
+  fm: '[частота]',
+  address: '[адреса редакції], м. Коломия',
+  phone: '[+380 XX XXX XX XX]',
+  email: '[email редакції]',
+  radioStream: '',   // URL аудіопотоку радіо (Icecast / HLS). Порожньо = демо-режим
+  tvStream: '',      // URL HLS-потоку телеканалу. Порожньо = демо-режим
+  weather: { lat: 48.5312, lon: 25.0365 }
+};
+
+/* ================= Зображення (Unsplash, перевірені ID) ================= */
+const U = 'https://images.unsplash.com/';
+const src = (id, w) => `${U}${id}?auto=format&fit=crop&w=${w}&q=72`;
+const srcset = (id, ws = [480, 800, 1200]) => ws.map(w => `${src(id, w)} ${w}w`).join(', ');
+const P = {
+  fog: 'photo-1641125639624-1197fdee779d', sunsetHills: 'photo-1484911501340-37fbfd715b41', fog2: 'photo-1672238387412-f45ad4b2a1da',
+  fog3: 'photo-1661267795655-44fb4484af18', snowRange: 'photo-1658501792244-4c329f29e46c', greenMtn: 'photo-1566679056459-4cbb58a28570',
+  ridges: 'photo-1691413819265-0e37578fdd8a', village: 'photo-1632150403063-b067959aafaf', valley: 'photo-1653775173951-061c5bf1a4f5',
+  forestVillage: 'photo-1695017097005-8382693bbfbe', woodHouse: 'photo-1739724087003-68b397b47523', townAerial: 'photo-1653939722958-1ce3036bc96a',
+  street: 'photo-1705303292677-7d1dcfb67939', tower: 'photo-1713370687518-d3531f770fb0', eggsPile: 'photo-1649976238832-29e0453e076e',
+  eggsTable: 'photo-1679948448217-991a93951828', eggHand: 'photo-1649797335445-6bba6178e2f2', eggCraft: 'photo-1650063214946-5f339bbad5ba',
+  mic: 'photo-1478737270239-2f02b77fc618', micVintage: 'photo-1767474365536-ef81bfa24c8a', onAir: 'photo-1763771757355-d2a395b5f8ea',
+  radioHost: 'photo-1779223372788-67f9c182d72b', camLight: 'photo-1625690303837-654c9666d2d0', camShoulder: 'photo-1543235074-4768b5c2233c',
+  stadium: 'photo-1706675780107-7c43cc487928', pitch: 'photo-1676746424139-77f8bd8922a8', snowForest: 'photo-1658501738491-5e82c25cf103',
+  snowHills: 'photo-1658501746466-4e4b76d1cc81', fogHouse: 'photo-1613481052923-68ac1b644025', stream: 'photo-1631037025386-1ba71199e167',
+  choir: 'photo-1790342027546-ed23ee38eca0', bandura: 'photo-1790342021328-3d98f8390ddf', dancers: 'photo-1667386426758-1036cf655323',
+  wreath: 'photo-1738779095734-6fa505acb4ef', duskHouse: 'photo-1589382311059-92a004daf77e', riverForest: 'photo-1596083800142-b98ebd2775ab',
+  hikers: 'photo-1502294624983-4ba589803a55', winterTower: 'photo-1765348788702-216d6cc303b2', market: 'photo-1773778580163-85da4ac3f705',
+  clockTower: 'photo-1667133378384-e4fc1d549261', river: 'photo-1712851373417-3c8fa43e090c', viaduct: 'photo-1719532946188-3c217fc37722',
+  hoverla: 'photo-1596397002934-f40300fa3949', woodcraft: 'photo-1648749766174-2ccfb0dd1e94'
+};
+
+/* ================= Дані (демо-наповнення) ================= */
+const CATS = { kol: ['Коломия', 'var(--c-kol)'], reg: ['Регіон', 'var(--c-reg)'], ua: ['Україна', 'var(--c-ua)'], sport: ['Спорт', 'var(--c-sport)'], cult: ['Культура', 'var(--c-cult)'] };
+const FEED = [
+  { c: 'kol', a: 14, t: 'На Ратуші відновили годинник: він знову відбиває кожну годину', v: 1 },
+  { c: 'ua', a: 37, t: 'Укрзалізниця призначила додатковий потяг Коломия–Київ на зимові свята' },
+  { c: 'reg', a: 58, t: 'Дорогу Коломия–Косів відремонтували на 12-кілометровій ділянці' },
+  { c: 'sport', a: 83, t: '«Покуття» вийшло до півфіналу Кубка області після серії пенальті', v: 1 },
+  { c: 'cult', a: 121, t: 'Коломийки в стилі техно: гурт з Печеніжина набрав 3 млн переглядів у TikTok', v: 1 },
+  { c: 'kol', a: 164, t: 'Міська рада оприлюднила проєкт бюджету-2027: що зміниться для громади' },
+  { c: 'reg', a: 205, t: 'У Яблунові відкрили сироварню з екскурсіями для туристів' },
+  { c: 'ua', a: 248, t: 'Пенсійний фонд нагадав, як перевірити страховий стаж онлайн' },
+  { c: 'cult', a: 296, t: 'Хор з Коломиї записав колядки для бійців на передовій' },
+  { c: 'kol', a: 347, t: 'Волонтери Коломиї передали на фронт ще три пікапи' },
+  { c: 'sport', a: 410, t: 'Гірський забіг «Писаний Камінь» зібрав рекордні 600 учасників' },
+  { c: 'reg', a: 470, t: 'Рятувальники Прикарпаття нагадали правила безпеки в горах узимку' }
+];
+/* [початок, кінець (хв від 00:00), назва, опис, прапорець] */
+const TV = [
+  [0, 360, 'Нічний ефір', 'Музика і найкращі випуски тижня'],
+  [360, 540, 'Ранок на НТК', 'Новини, погода, гості в студії та жива музика'],
+  [540, 545, 'Загальнонаціональна хвилина мовчання', 'Вшановуємо пам’ять загиблих захисників і захисниць', 'silence'],
+  [545, 570, 'Новини Коломиї', 'Ранковий випуск'],
+  [570, 630, 'Покуття: люди і місця', 'Документальний цикл про села району'],
+  [630, 690, 'Здоров’я з лікарем', 'Відповіді на запитання глядачів у прямому ефірі'],
+  [690, 720, 'Майстерня писанки', 'Знаки Покуття: безконечник і рожа'],
+  [720, 750, 'Новини Коломиї', 'Денний випуск'],
+  [750, 810, 'Карпати зблизька', 'Говерла: 2061 метр тиші'],
+  [810, 870, 'Дитяча година', 'Мультфільми і казки українською'],
+  [870, 930, 'Громада на зв’язку', 'Прямий ефір з очільниками громад'],
+  [930, 990, 'Музичний ефір', 'Коломийки і сучасна музика Прикарпаття'],
+  [990, 1020, 'Спорт Прикарпаття', 'Огляд тижня: футбол, боротьба, гірський біг'],
+  [1020, 1080, 'Відкрита студія', 'Гості, розмови, ваші дзвінки'],
+  [1080, 1120, 'Новини Коломиї. Головне', 'Вечірній випуск'],
+  [1120, 1170, 'Ветеранський простір', 'Історії повернення до мирного життя'],
+  [1170, 1230, 'Гуцульщина: смак і традиція', 'Кулінарний тревел-цикл'],
+  [1230, 1260, 'Підсумки дня', 'Головне за 30 хвилин'],
+  [1260, 1380, 'Кіно на НТК', 'Українське кіно'],
+  [1380, 1440, 'Нічний ефір', 'Музика і повтори']
+];
+const RADIO = [
+  [0, 360, 'Нічна хвиля', 'Музика без перерв'],
+  [360, 600, 'Добрий ранок, Коломие!', 'Новини щогодини, погода, ситуація на дорогах'],
+  [600, 720, 'Хіт-парад Прикарпаття', 'Голосуйте за пісні в Telegram'],
+  [720, 840, 'Обідня перерва', 'Музика і короткі новини'],
+  [840, 900, 'Коломийки наживо', 'Гурти й виконавці з району'],
+  [900, 960, 'Розмова на хвилі', 'Гість у студії'],
+  [960, 1140, 'Драйв-тайм', 'Музика на дорогу додому'],
+  [1140, 1260, 'Гуцульські вечорниці', 'Автентика і сучасний фолк'],
+  [1260, 1380, 'Джаз над Прутом', 'Спокійна музика на вечір'],
+  [1380, 1440, 'Тиха година', 'Музика перед сном']
+];
+const ROWS = [
+  { title: 'Найпопулярніше за тиждень', top: true, items: [
+    { t: '«Зимове місто»: як готують центр Коломиї', img: P.market, dur: '4:12', d: 'Репортаж з монтажу ковзанки та ярмарку: що відкриють першим і де буде пункт незламності.' },
+    { t: '«Покуття» проти «Карпат»: огляд матчу', img: P.stadium, dur: '8:40', d: 'Усі гольові моменти та серія пенальті, яка вивела коломийців у півфінал Кубка.' },
+    { t: 'Перший сніг на Чорногорі', img: P.snowRange, dur: '3:05', d: 'Знімальна група піднялася на хребет у день першого снігопаду.' },
+    { t: 'Майстерня писанки: знаки Покуття', img: P.eggHand, dur: '26:10', d: 'Що означають безконечник, рожа і сосонка, і як їх писати воском.' },
+    { t: 'Громада на зв’язку: бюджет-2027', img: P.townAerial, dur: '52:00', d: 'Повний запис ефіру з відповідями на запитання глядачів.' },
+    { t: 'Кам’яні віадуки Карпат', img: P.viaduct, dur: '18:30', d: 'Хто будував мости над Прутом і чому вони стоять уже понад століття.' }
+  ] },
+  { title: 'Карпати зблизька', items: [
+    { t: 'Говерла: 2061 метр тиші', img: P.hoverla, dur: '24:12', d: 'Найвища точка України очима рятувальників, туристів і пастухів.', n: 1 },
+    { t: 'Туман над Яремчем', img: P.fog2, dur: '19:45', d: 'Ранок у лісі, де хмари ходять нижче за смереки.' },
+    { t: 'Прут: від витоку до Коломиї', img: P.river, dur: '27:30', d: 'Подорож уздовж річки, що з’єднує гори й Покуття.' },
+    { t: 'Гуцульська хата: як будували предки', img: P.woodHouse, dur: '21:05', d: 'Теслі з Верховинщини показують секрети зрубу без жодного цвяха.' },
+    { t: 'Зимові полонини', img: P.snowForest, dur: '22:40', d: 'Хто залишається в горах, коли туристи роз’їжджаються.' },
+    { t: 'Ранок у селі під горою', img: P.village, dur: '17:50', d: 'Один день з життя гірського села, від першого півня до вечорниць.' },
+    { t: 'Стежками Писаного Каменю', img: P.hikers, dur: '23:15', d: 'Маршрут вихідного дня для всієї родини.' }
+  ] },
+  { title: 'Культура і традиції', items: [
+    { t: 'Коломийки: пісня в кожному кроці', img: P.dancers, dur: '15:20', d: 'Як народився жанр, що дав місту ім’я на мапі фольклору.', n: 1 },
+    { t: 'Бандуристки Покуття', img: P.bandura, dur: '12:40', d: 'Молоді виконавиці, які повертають бандурі голос.' },
+    { t: 'Хор, що співає для фронту', img: P.choir, dur: '9:55', d: 'Колядки, записані в Коломиї, звучать в окопах.' },
+    { t: 'Писанкарки з Коломиї', img: P.eggsPile, dur: '28:00', d: 'Три покоління майстринь і одна спільна справа.' },
+    { t: 'Різьбярі: дерево, що говорить', img: P.woodcraft, dur: '19:30', d: 'Майстерня, де ще працюють інструментами прадідів.' },
+    { t: 'Вінок: оберіг і стиль', img: P.wreath, dur: '11:10', d: 'Як традиційний вінок став трендом серед молоді.' }
+  ] },
+  { title: 'Новини та репортажі', items: [
+    { t: 'Новини Коломиї · ', date: true, img: P.camShoulder, dur: '22:30', d: 'Повний вечірній випуск новин.', n: 1 },
+    { t: 'Підсумки тижня', img: P.camLight, dur: '28:00', d: 'Головні події Коломийщини за сім днів.' },
+    { t: 'Дорога Коломия–Косів: що змінилось', img: P.street, dur: '6:15', d: 'Проїхали відремонтованою ділянкою разом з водіями маршруток.' },
+    { t: 'Годинник на Ратуші знову йде', img: P.clockTower, dur: '3:40', d: 'Як майстри повертали до життя старий механізм.' },
+    { t: 'Сироварня в Яблунові', img: P.fogHouse, dur: '7:20', d: 'Гірська бринза, екскурсії та нові робочі місця.' },
+    { t: 'Перший сніг: чи готові дороги', img: P.snowHills, dur: '4:55', d: 'Перевірили техніку комунальників і запаси піщано-соляної суміші.' }
+  ] }
+];
+const SHOWS = [
+  { name: 'Ранок на НТК', when: 'Пн–Пт · 06:00', hosts: ['Оксана Мельничук', 'Тарас Андрусяк'], img: P.sunsetHills, alt: 'Світанок над пагорбами Покуття', desc: 'Три години доброго ранку: новини, погода, гості в студії, корисне для громади та жива музика.' },
+  { name: 'Новини Коломиї', when: 'Щодня · 09:05, 12:00, 18:00', hosts: ['Мар’яна Костюк', 'Іван Гуменюк'], img: P.camShoulder, alt: 'Оператор з плечовою камерою на зйомці', desc: 'Головне про місто й район без зайвого шуму: факти, коментарі, репортажі з місць подій.' },
+  { name: 'Карпати зблизька', when: 'Сб · 12:30', hosts: ['Василь Гуцуляк'], img: P.viaduct, alt: 'Кам’яний віадук над гірською річкою', desc: 'Документальний цикл про людей, ремесла й стежки Гуцульщини та Покуття.' },
+  { name: 'Майстерня писанки', when: 'Нд · 11:30', hosts: ['Ганна Ковалюк'], img: P.eggCraft, alt: 'Руки майстрині з розписаною писанкою', desc: 'Знаки, барви й техніки коломийської писанки: вчимося разом з майстринями.' },
+  { name: 'Громада на зв’язку', when: 'Ср · 14:30', hosts: ['Роман Федорук'], img: P.townAerial, alt: 'Панорама міста з висоти', desc: 'Прямий ефір з очільниками громад: ваші запитання, їхні відповіді, без скорочень.' },
+  { name: 'Спорт Прикарпаття', when: 'Пн–Пт · 16:30', hosts: ['Дмитро Савчук'], img: P.pitch, alt: 'Футбольне поле під прожекторами', desc: 'Футбол, боротьба, гірські забіги і діти, які завтра стануть чемпіонами.' },
+  { name: 'Гуцульські вечорниці', when: 'Радіо · щодня 19:00', hosts: ['Юлія Палійчук'], img: P.dancers, alt: 'Танцівниці в народних строях на сцені', desc: 'Найтепліша година радіо: коломийки, автентика та сучасні гурти з Прикарпаття.' }
+];
+const PODS = [
+  { show: 'Коломия, яку ми не знаємо', ep: 'Ратуша: що бачив годинник', min: 32, img: P.clockTower },
+  { show: 'Розмова на хвилі', ep: 'Ультрамарафонець з Печеніжина: 100 км горами', min: 47, img: P.mic },
+  { show: 'Мова має значення', ep: 'Покутська говірка: 20 слів, які ми забуваємо', min: 18, img: P.micVintage },
+  { show: 'Ветеранський простір', ep: 'Повернутися до мирної професії', min: 39, img: P.onAir },
+  { show: 'Бізнес Покуття', ep: 'Як сироварня з Яблунева вийшла на експорт', min: 26, img: P.fogHouse }
+];
+const SONGS = [['KALUSH', 'Стефанія'], ['Океан Ельзи', 'Без бою'], ['Go_A', 'Шум'], ['The Hardkiss', 'Журавлі'], ['Христина Соловій', 'Тримай'], ['Один в каное', 'Човен'], ['Скрябін', 'Старі фотографії'], ['Бумбокс', 'Вахтерам']];
+
+/* ================= Час у Коломиї (Europe/Kyiv) ================= */
+const TZ = (() => { try { new Intl.DateTimeFormat('uk', { timeZone: 'Europe/Kyiv' }).format(); return 'Europe/Kyiv' } catch (e) { return 'Europe/Kiev' } })();
+const FP = new Intl.DateTimeFormat('en-GB', { timeZone: TZ, hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' });
+function kyiv() { const o = {}; FP.formatToParts(new Date()).forEach(p => o[p.type] = p.value); const h = (+o.hour) % 24, m = +o.minute, s = +o.second; return { h, m, s, min: h * 60 + m + s / 60 } }
+const pad = n => String(n).padStart(2, '0');
+const hhmm = x => { x = ((Math.floor(x) % 1440) + 1440) % 1440; return pad(Math.floor(x / 60)) + ':' + pad(x % 60) };
+const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
+const todayLong = () => cap(new Intl.DateTimeFormat('uk-UA', { timeZone: TZ, weekday: 'long', day: 'numeric', month: 'long' }).format(new Date()));
+const todayShort = () => new Intl.DateTimeFormat('uk-UA', { timeZone: TZ, day: 'numeric', month: 'long' }).format(new Date());
+function cur(list, t) { return list.find(p => t >= p[0] && t < p[1]) || list[list.length - 1] }
+function upcoming(list, t, n) {
+  let i = list.findIndex(p => t >= p[0] && t < p[1]); if (i < 0) i = list.length - 1;
+  const out = [];
+  for (let k = 1; out.length < n && k <= list.length; k++) { const p = list[(i + k) % list.length]; if (p[4] === 'silence') continue; out.push({ p, tomorrow: i + k >= list.length }) }
+  return out;
+}
+
+/* ================= Утиліти ================= */
+const toastEl = $('#toast'); let toastT;
+function toast(msg) { toastEl.textContent = msg; toastEl.classList.add('show'); clearTimeout(toastT); toastT = setTimeout(() => toastEl.classList.remove('show'), 3600) }
+$$('[data-cfg]').forEach(el => el.textContent = CONFIG[el.dataset.cfg]);
+$('#todayLbl').textContent = todayLong();
+const hdr = $('#hdr');
+
+/* ================= Тема ================= */
+const themeBtn = $('#themeBtn');
+function setTheme(t, save) {
+  root.dataset.theme = t; if (save) store.set('ntk-theme', t);
+  themeBtn.setAttribute('aria-label', t === 'dark' ? 'Увімкнути світлу тему' : 'Увімкнути темну тему');
+  themeBtn.querySelector('use').setAttribute('href', t === 'dark' ? '#i-sun' : '#i-moon');
+  $('meta[name="theme-color"]').setAttribute('content', t === 'dark' ? '#111814' : '#f7f3ec');
+}
+setTheme(root.dataset.theme === 'light' ? 'light' : 'dark');
+themeBtn.addEventListener('click', () => setTheme(root.dataset.theme === 'dark' ? 'light' : 'dark', true));
+
+/* ================= Шапка і меню ================= */
+let lastY = scrollY, menuOpen = false;
+function onScroll() {
+  const y = scrollY;
+  hdr.classList.toggle('is-solid', y > 40 || menuOpen);
+  if (!menuOpen) hdr.classList.toggle('is-hidden', y > lastY && y > 360);
+  lastY = y;
+}
+addEventListener('scroll', onScroll, { passive: true }); onScroll();
+hdr.addEventListener('focusin', () => hdr.classList.remove('is-hidden'));
+const menu = $('#menu'), burger = $('#burger');
+function setMenu(o) {
+  menuOpen = o; menu.classList.toggle('is-open', o); menu.inert = !o;
+  burger.setAttribute('aria-expanded', o); burger.querySelector('use').setAttribute('href', o ? '#i-x' : '#i-menu');
+  root.style.overflow = o ? 'hidden' : ''; hdr.classList.remove('is-hidden'); onScroll();
+}
+burger.addEventListener('click', () => setMenu(!menuOpen));
+$$('a', menu).forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+/* ================= Інтро: писанка ================= */
+function eggSVG() {
+  const EGG = 'M100 6C147 6 188 82 188 150C188 216 149 254 100 254C51 254 12 216 12 150C12 82 53 6 100 6Z';
+  const by = (y, s, x) => { const t = x / 200; return y + 2 * t * (1 - t) * s };
+  const belt = (y, s) => `<path d="M0 ${y}Q100 ${y + s} 200 ${y}"/>`;
+  const star = (cx, cy, r, sx = 1) => `<g transform="translate(${cx} ${cy}) scale(${sx} 1)">${[0, 1, 2, 3, 4, 5, 6, 7].map(k => `<path transform="rotate(${k * 45})" d="M0 0L${(r * .42).toFixed(1)} ${(-r * .17).toFixed(1)}L${r} 0L${(r * .42).toFixed(1)} ${(r * .17).toFixed(1)}Z"/>`).join('')}</g>`;
+  let teeth = '';
+  for (let x = 14; x <= 186; x += 18) { const y1 = by(108, 24, x), y2 = by(180, 24, x); teeth += `<path d="M${x - 7} ${y1}L${x} ${y1 - 15}L${x + 7} ${y1}Z"/><path d="M${x - 7} ${y2}L${x} ${y2 + 15}L${x + 7} ${y2}Z"/>` }
+  const wave = (y, a) => { let p = `M0 ${y}`; for (let x = 0; x < 200; x += 25) p += ` Q${x + 6.25} ${y - a} ${x + 12.5} ${y} T${x + 25} ${y}`; return `<path d="${p}"/>` };
+  return `<svg viewBox="0 0 200 260" role="presentation"><defs><clipPath id="eggClip"><path d="${EGG}"/></clipPath>
+  <radialGradient id="eggShade" cx="36%" cy="30%" r="78%"><stop offset="0" stop-color="#fff" stop-opacity=".32"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".5"/></radialGradient></defs>
+  <g clip-path="url(#eggClip)">
+    <rect class="egg-base" width="200" height="260"/>
+    <g class="egg-l egg-l1" fill="none" stroke="var(--d-ivory)" stroke-width="3.2">${belt(108, 24)}${belt(180, 24)}${belt(58, 14)}${belt(222, 16)}<path d="M100 6V254"/></g>
+    <g class="egg-l egg-l2" fill="var(--d-ochre)">${teeth}<circle cx="100" cy="30" r="5"/><circle cx="100" cy="238" r="5"/></g>
+    <g class="egg-l egg-l3" fill="var(--d-green)">${star(100, 156, 28)}${star(42, 152, 22, .6)}${star(158, 152, 22, .6)}</g>
+    <g class="egg-l egg-l4"><g fill="none" stroke="var(--d-red)" stroke-width="3">${wave(40, 8)}${wave(240, 7)}</g><g fill="var(--d-red)"><circle cx="100" cy="156" r="5"/><circle cx="42" cy="152" r="3.5"/><circle cx="158" cy="152" r="3.5"/></g></g>
+    <rect width="200" height="260" fill="url(#eggShade)"/>
+  </g><path d="${EGG}" fill="none" stroke="var(--d-ivory)" stroke-opacity=".28" stroke-width="1.5"/></svg>`;
+}
+function runIntro() {
+  const intro = $('#intro'), ready = () => root.classList.add('is-ready');
+  if (!intro || reduce || root.classList.contains('no-intro')) { intro && intro.remove(); requestAnimationFrame(ready); return }
+  sess.set('ntk-intro', '1');
+  $('#introEgg').innerHTML = eggSVG();
+  intro.classList.add('run');
+  let done = false; const t = setTimeout(finish, 1700);
+  function finish() { if (done) return; done = true; clearTimeout(t); intro.classList.add('out'); setTimeout(ready, 260); setTimeout(() => intro.remove(), 1100) }
+  intro.addEventListener('click', finish);
+  addEventListener('keydown', finish, { once: true });
+  addEventListener('wheel', finish, { once: true, passive: true });
+  addEventListener('touchmove', finish, { once: true, passive: true });
+}
+
+/* ================= Hero: ефір, годинник, режим перегляду ================= */
+const hero = $('#top'), heroImg = $('#heroImg');
+const LIVE_SRC = heroImg.getAttribute('src'), LIVE_SRCSET = heroImg.getAttribute('srcset');
+let watching = false, vod = null, demoShown = false, tvMuted = false;
+function tickClock() { const k = kyiv(); $('#tc').textContent = `${pad(k.h)}:${pad(k.m)}:${pad(k.s)}` }
+function renderOnAir() {
+  const t = kyiv().min, p = cur(TV, t), n = upcoming(TV, t, 1)[0];
+  $('#oaT').textContent = p[2];
+  $('#oaTime').textContent = `${hhmm(p[0])}–${hhmm(p[1])}`;
+  $('#oaBar').style.setProperty('--p', ((t - p[0]) / (p[1] - p[0])).toFixed(4));
+  $('#oaNext').innerHTML = n ? `Далі о ${hhmm(n.p[0])}: <b>${n.p[2]}</b>` : '';
+  if (watching && !vod) { $('#l3t').textContent = p[2]; $('#l3s').textContent = p[3]; $('#wbTitle').textContent = p[2] }
+}
+function setPausedTV(paused) {
+  hero.classList.toggle('is-paused', paused);
+  $('#wbPause').setAttribute('aria-label', paused ? 'Відтворити' : 'Пауза');
+  $('#wbPause use').setAttribute('href', paused ? '#i-play' : '#i-pause');
+}
+function startWatch(item) {
+  vod = item || null; watching = true;
+  if (vod) {
+    heroImg.srcset = srcset(vod.img, [960, 1600, 2400]); heroImg.src = src(vod.img, 1600); heroImg.alt = vod.t;
+    $('#hudLive').hidden = true; $('#hudVod').hidden = false;
+    $('#l3t').textContent = vod.t; $('#l3s').textContent = `${vod.row} · ${vod.dur}`;
+    $('#wbTitle').textContent = vod.t; $('#wbLive').textContent = 'Відео';
+  } else {
+    restoreLive(); const p = cur(TV, kyiv().min);
+    $('#l3t').textContent = p[2]; $('#l3s').textContent = p[3]; $('#wbTitle').textContent = p[2]; $('#wbLive').textContent = 'Наживо';
+  }
+  hero.classList.add('is-watching'); setPausedTV(false);
+  if (scrollY > 10) scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+  if (PL.playing) { plPause(); toast('Радіо на паузі, поки ви дивитеся ТБ') }
+  else if (!CONFIG.tvStream && !demoShown) { demoShown = true; toast('Демо-режим: тут відтворюватиметься HLS-потік телеканалу') }
+  setTimeout(() => $('#wbPause').focus({ preventScroll: true }), 300);
+}
+function restoreLive() { heroImg.srcset = LIVE_SRCSET; heroImg.src = LIVE_SRC; heroImg.alt = 'Туман стелиться над смерековими схилами Карпат'; $('#hudLive').hidden = false; $('#hudVod').hidden = true }
+function stopWatch() {
+  if (!watching) return; watching = false; hero.classList.remove('is-watching'); setPausedTV(false);
+  if (vod) { vod = null; restoreLive() }
+  if (d.fullscreenElement) d.exitFullscreen().catch(() => {});
+  $('#ctaWatch').focus({ preventScroll: true });
+}
+$('#ctaWatch').addEventListener('click', () => startWatch());
+$('#hdrLive').addEventListener('click', () => { setMenu(false); startWatch() });
+$('#wbExit').addEventListener('click', stopWatch);
+$('#wbPause').addEventListener('click', () => setPausedTV(!hero.classList.contains('is-paused')));
+$('#wbMute').addEventListener('click', e => { tvMuted = !tvMuted; const b = e.currentTarget; b.setAttribute('aria-label', tvMuted ? 'Увімкнути звук' : 'Вимкнути звук'); b.querySelector('use').setAttribute('href', tvMuted ? '#i-mute' : '#i-vol') });
+$('#wbFull').addEventListener('click', () => { if (d.fullscreenElement) d.exitFullscreen(); else if (hero.requestFullscreen) hero.requestFullscreen().catch(() => toast('Повноекранний режим недоступний у цьому браузері')) });
+$('#ctaListen').addEventListener('click', () => { if (watching) stopWatch(); PL.mode = 'live'; plPlay(); const pl = $('#player'); pl.classList.remove('nudge'); void pl.offsetWidth; pl.classList.add('nudge') });
+
+function renderTicker() {
+  const items = FEED.slice(0, 8).map(f => `<a href="#news">${f.t}</a>`).join('');
+  $('#tickTrack').innerHTML = `<div class="tk">${items}</div><div class="tk" aria-hidden="true">${items.replaceAll('<a ', '<a tabindex="-1" ')}</div>`;
+}
+
+/* ================= Стрічка новин ================= */
+let feedFilter = 'all';
+function renderFeed() {
+  const now = kyiv().min, list = $('#feedList');
+  const items = FEED.filter(f => feedFilter === 'all' || f.c === feedFilter);
+  list.innerHTML = items.length ? items.map((f, i) => {
+    const m = now - f.a, y = m < 0;
+    return `<li class="feed__it" style="--i:${i}"><a href="#"><time>${y ? 'вчора<br>' : ''}${hhmm(m)}</time><span class="tag" style="--c:${CATS[f.c][1]}">${CATS[f.c][0]}</span><span class="feed__t">${f.t}${f.v ? '<svg class="ic feed__v" role="img" aria-label="з відео"><use href="#i-play"/></svg>' : ''}</span></a></li>`;
+  }).join('') : `<li class="feed__empty">Сьогодні в цій рубриці тихо. Маєте новину? <a href="#report">Повідомте нам</a></li>`;
+  list.classList.remove('swap'); void list.offsetWidth; list.classList.add('swap');
+}
+$('#chips').innerHTML = [['all', 'Усі', '']].concat(Object.entries(CATS).map(([k, v]) => [k, v[0], v[1]]))
+  .map(([k, n, c]) => `<button class="chip" type="button" data-f="${k}" aria-pressed="${k === 'all'}"${c ? ` style="--c:${c}"` : ''}>${c ? '<i></i>' : ''}${n}</button>`).join('');
+$('#chips').addEventListener('click', e => {
+  const b = e.target.closest('.chip'); if (!b) return;
+  feedFilter = b.dataset.f; $$('.chip').forEach(x => x.setAttribute('aria-pressed', x === b)); renderFeed();
+});
+
+/* ================= Ефір сьогодні: картка, «далі», шкала ================= */
+let airMode = 'tv', selStart = null, lastAirMin = -1;
+let remind = new Set(); try { remind = new Set(JSON.parse(store.get('ntk-remind') || '[]')) } catch (e) {}
+const PPM = () => innerWidth < 700 ? 2.6 : 3.4;
+const airList = () => airMode === 'tv' ? TV : RADIO;
+function renderNow(p, curP, t) {
+  const isNow = p === curP, past = t >= p[1], key = airMode + p[0];
+  const ch = airMode === 'tv' ? 'НТК ТБ' : 'Радіо НТК';
+  const k = isNow ? `<span class="dot dot--live"></span>Зараз в ефірі · ${ch}` : (past ? `Було сьогодні о ${hhmm(p[0])} · ${ch}` : `Сьогодні о ${hhmm(p[0])} · ${ch}`);
+  const range = `<span class="now__time">${hhmm(p[0])}–${hhmm(p[1])}</span>`;
+  let foot;
+  if (isNow) foot = `${range}<span class="bar"><i style="--p:${((t - p[0]) / (p[1] - p[0])).toFixed(3)}"></i></span><span class="now__left">ще ${Math.max(1, Math.round(p[1] - t))} хв</span><button class="btn btn--live js-go" type="button"><svg class="ic"><use href="#i-play"/></svg>${airMode === 'tv' ? 'Дивитися наживо' : 'Слухати наживо'}</button>`;
+  else if (past) foot = `${range}<a class="btn btn--line" href="#video"><svg class="ic"><use href="#i-play"/></svg>Шукати в архіві</a>`;
+  else { const on = remind.has(key); foot = `${range}<button class="btn btn--line js-bell" type="button" data-k="${key}" data-n="${esc(p[2])}" data-t="${hhmm(p[0])}" aria-pressed="${on}"><svg class="ic"><use href="#i-bell"/></svg>${on ? 'Нагадаю' : 'Нагадати'}</button>` }
+  const card = $('#nowCard');
+  card.innerHTML = `<svg class="now__orn" aria-hidden="true"><use href="#i-star"/></svg><p class="now__k">${k}</p><h3 class="now__t">${p[2]}</h3><p class="now__d">${p[3] || ''}</p><div class="now__foot">${foot}</div>`;
+}
+function renderAir(scroll) {
+  const list = airList(), t = kyiv().min, ppm = PPM(), sc = $('#tlScroll'), keep = sc.scrollLeft;
+  const curP = cur(list, t), sel = list.find(p => p[0] === selStart) || curP;
+  renderNow(sel, curP, t);
+  $('#nextList').innerHTML = upcoming(list, t, 3).map(({ p, tomorrow }) => {
+    const key = airMode + p[0], on = remind.has(key);
+    return `<li><time>${hhmm(p[0])}</time><div><b>${p[2]}</b><span>${tomorrow ? 'Завтра · ' : ''}${p[3] || ''}</span></div><button class="bell js-bell" type="button" data-k="${key}" data-n="${esc(p[2])}" data-t="${hhmm(p[0])}" aria-pressed="${on}" aria-label="Нагадати про «${esc(p[2])}» о ${hhmm(p[0])}"><svg class="ic"><use href="#i-bell"/></svg></button></li>`;
+  }).join('');
+  const tr = $('#tlTrack'); tr.style.width = (1440 * ppm) + 'px';
+  let html = '<div class="tl__ruler">' + Array.from({ length: 24 }, (_, h) => `<span style="left:${h * 60 * ppm}px">${pad(h)}:00</span>`).join('') + '</div>';
+  html += list.map(p => {
+    if (p[4] === 'silence') return `<div class="tl__mark" style="left:${p[0] * ppm}px"><span>Хвилина мовчання</span></div>`;
+    const st = t >= p[1] ? 'is-past' : (t >= p[0] ? 'is-now' : '');
+    return `<button class="tl__b ${st}${sel === p ? ' is-sel' : ''}" type="button" style="left:${p[0] * ppm + 2}px;width:${(p[1] - p[0]) * ppm - 4}px" data-s="${p[0]}" aria-label="${hhmm(p[0])}, ${esc(p[2])}"><span class="tl__time">${hhmm(p[0])}–${hhmm(p[1])}</span><span class="tl__name">${p[2]}</span>${st === 'is-now' ? `<i class="tl__prog" style="--p:${((t - p[0]) / (p[1] - p[0])).toFixed(3)}"></i>` : ''}</button>`;
+  }).join('');
+  html += `<div class="tl__now" style="left:${t * ppm}px" data-t="${hhmm(t)}"></div>`;
+  tr.innerHTML = html;
+  if (scroll) sc.scrollTo({ left: Math.max(0, t * ppm - sc.clientWidth * .3), behavior: scroll === 'smooth' && !reduce ? 'smooth' : 'auto' });
+  else sc.scrollLeft = keep;
+  lastAirMin = Math.floor(t);
+}
+function setAir(m) {
+  airMode = m; selStart = null;
+  $$('.tab').forEach(x => { const on = x.dataset.mode === m; x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1 });
+  renderAir('smooth');
+}
+$$('.tab').forEach(tb => tb.addEventListener('click', () => setAir(tb.dataset.mode)));
+$('#airTabs').addEventListener('keydown', e => {
+  if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+  const next = airMode === 'tv' ? 'radio' : 'tv'; setAir(next); $(`.tab[data-mode="${next}"]`).focus();
+});
+$('#air').addEventListener('click', e => {
+  const bell = e.target.closest('.js-bell');
+  if (bell) {
+    const k = bell.dataset.k, on = !remind.has(k); on ? remind.add(k) : remind.delete(k);
+    store.set('ntk-remind', JSON.stringify([...remind]));
+    toast(on ? `Нагадаємо за 10 хвилин до «${bell.dataset.n}» (${bell.dataset.t})` : `Нагадування про «${bell.dataset.n}» скасовано`);
+    renderAir(); return;
+  }
+  if (e.target.closest('.js-go')) { if (airMode === 'tv') startWatch(); else { PL.mode = 'live'; plPlay() } return }
+  const b = e.target.closest('.tl__b');
+  if (b) { selStart = +b.dataset.s; renderAir(); $('#nowCard').classList.remove('swap'); void $('#nowCard').offsetWidth; $('#nowCard').classList.add('swap') }
+});
+(() => {
+  const sc = $('#tlScroll'); let down = false, sx = 0, sl = 0, moved = false;
+  sc.addEventListener('pointerdown', e => { if (e.pointerType !== 'mouse' || e.button !== 0) return; down = true; moved = false; sx = e.clientX; sl = sc.scrollLeft });
+  addEventListener('pointermove', e => { if (!down) return; const dx = e.clientX - sx; if (Math.abs(dx) > 5) { moved = true; sc.classList.add('dragging') } if (moved) sc.scrollLeft = sl - dx });
+  addEventListener('pointerup', () => { down = false; setTimeout(() => sc.classList.remove('dragging'), 0) });
+  sc.addEventListener('click', e => { if (moved) { e.preventDefault(); e.stopPropagation(); moved = false } }, true);
+  $('#tlPrev').addEventListener('click', () => sc.scrollBy({ left: -sc.clientWidth * .6, behavior: reduce ? 'auto' : 'smooth' }));
+  $('#tlNext').addEventListener('click', () => sc.scrollBy({ left: sc.clientWidth * .6, behavior: reduce ? 'auto' : 'smooth' }));
+  $('#tlNow').addEventListener('click', () => { selStart = null; renderAir('smooth') });
+})();
+
+/* ================= Відеоархів: каруселі + розкривна панель ================= */
+function vcard(it, i, r, ri) {
+  const title = it.date ? it.t + todayShort() : it.t;
+  const img = `<img src="${src(it.img, 640)}" srcset="${srcset(it.img, [400, 640, 960])}" sizes="(max-width:700px) 75vw, 380px" alt="" loading="lazy" decoding="async">`;
+  if (r.top) return `<li><button class="vcard vcard--top" type="button" data-r="${ri}" data-i="${i}" aria-label="${i + 1}. ${esc(title)}, ${it.dur}"><span class="vcard__num" aria-hidden="true">${i + 1}</span><span class="vcard__img">${img}<span class="vcard__dur">${it.dur}</span><span class="vcard__play"><svg class="ic"><use href="#i-play"/></svg></span><span class="vcard__ov">${title}</span></span></button></li>`;
+  return `<li><button class="vcard" type="button" data-r="${ri}" data-i="${i}"><span class="vcard__img">${img}${it.n ? '<span class="vcard__new">Нове</span>' : ''}<span class="vcard__dur">${it.dur}</span><span class="vcard__play"><svg class="ic"><use href="#i-play"/></svg></span></span><span class="vcard__t">${title}</span><span class="vcard__m">${r.title} · ${it.dur}</span></button></li>`;
+}
+function renderVod() {
+  const host = $('#vodRows');
+  host.innerHTML = ROWS.map((r, ri) => `<div class="row rv" data-row="${ri}">
+    <div class="row__head wrap"><h3>${r.title}</h3><div class="row__nav"><button class="rbtn js-prev" type="button" aria-label="Попередні: ${esc(r.title)}"><svg class="ic"><use href="#i-chev-l"/></svg></button><button class="rbtn js-next" type="button" aria-label="Наступні: ${esc(r.title)}"><svg class="ic"><use href="#i-chev-r"/></svg></button></div></div>
+    <ul class="row__track">${r.items.map((it, i) => vcard(it, i, r, ri)).join('')}</ul>
+    <div class="jaw" inert><div><div class="jaw__card"></div></div></div></div>`).join('');
+  $$('.row', host).forEach(row => {
+    const tr = $('.row__track', row), prev = $('.js-prev', row), next = $('.js-next', row);
+    const upd = () => { prev.disabled = tr.scrollLeft < 8; next.disabled = tr.scrollLeft + tr.clientWidth > tr.scrollWidth - 8 };
+    tr.addEventListener('scroll', upd, { passive: true }); addEventListener('resize', upd); upd();
+    prev.addEventListener('click', () => tr.scrollBy({ left: -tr.clientWidth * .85, behavior: reduce ? 'auto' : 'smooth' }));
+    next.addEventListener('click', () => tr.scrollBy({ left: tr.clientWidth * .85, behavior: reduce ? 'auto' : 'smooth' }));
+  });
+  host.addEventListener('click', e => {
+    const c = e.target.closest('.vcard');
+    if (c) return openJaw(c);
+    const jaw = e.target.closest('.jaw'); if (!jaw) return;
+    if (e.target.closest('.jaw__x')) return closeJaw(jaw);
+    const ri = +jaw.dataset.r, ii = +jaw.dataset.i, it = ROWS[ri].items[ii];
+    if (e.target.closest('.js-play')) startWatch({ ...it, t: it.date ? it.t + todayShort() : it.t, row: ROWS[ri].title });
+    const later = e.target.closest('.js-later');
+    if (later) { const on = later.getAttribute('aria-pressed') !== 'true'; later.setAttribute('aria-pressed', on); later.lastChild.textContent = on ? 'У списку' : 'Дивитися пізніше'; toast(on ? 'Додано до списку «Дивитися пізніше»' : 'Прибрано зі списку') }
+  });
+}
+function closeJaw(jaw) { jaw.classList.remove('is-open'); jaw.inert = true; $$('.vcard.is-active', jaw.parentElement).forEach(x => x.classList.remove('is-active')) }
+function openJaw(card) {
+  const row = card.closest('.row'), jaw = $('.jaw', row), ri = +card.dataset.r, ii = +card.dataset.i, r = ROWS[ri], it = r.items[ii];
+  if (card.classList.contains('is-active')) return closeJaw(jaw);
+  $$('.jaw.is-open').forEach(j => { if (j !== jaw) closeJaw(j) });
+  $$('.vcard.is-active', row).forEach(x => x.classList.remove('is-active')); card.classList.add('is-active');
+  const title = it.date ? it.t + todayShort() : it.t;
+  jaw.dataset.r = ri; jaw.dataset.i = ii;
+  $('.jaw__card', jaw).innerHTML = `<div class="jaw__media"><img src="${src(it.img, 1200)}" srcset="${srcset(it.img, [640, 1000, 1400])}" sizes="(max-width:760px) 100vw, 56vw" alt=""></div>
+    <div class="jaw__body"><p class="meta"><span class="tag">${r.title}</span><span>${it.dur}</span><span>${it.n ? 'Нове' : 'Цього тижня'}</span></p><h4>${title}</h4><p class="d">${it.d}</p>
+    <div class="jaw__btns"><button class="btn btn--live js-play" type="button"><svg class="ic"><use href="#i-play"/></svg>Дивитися</button><button class="btn btn--line js-later" type="button" aria-pressed="false"><svg class="ic"><use href="#i-plus"/></svg><span>Дивитися пізніше</span></button></div></div>
+    <button class="icbtn jaw__x" type="button" aria-label="Закрити"><svg class="ic"><use href="#i-x"/></svg></button>`;
+  jaw.inert = false; jaw.classList.add('is-open');
+  setTimeout(() => { const rc = jaw.getBoundingClientRect(); if (rc.bottom > innerHeight - 90) scrollBy({ top: Math.min(rc.bottom - innerHeight + 110, rc.top - 120), behavior: reduce ? 'auto' : 'smooth' }) }, 380);
+}
+
+/* ================= Передачі та ведучі ================= */
+const initials = n => n.split(' ').map(w => w[0]).join('').slice(0, 2);
+const hostsHTML = s => s.hosts.map(h => `<span class="host"><i>${initials(h)}</i>${h}</span>`).join('');
+let showI = -1;
+function renderShows() {
+  $('#showList').innerHTML = SHOWS.map((s, i) => `<li><button class="show" type="button" data-i="${i}" aria-expanded="false"><span class="show__n">${pad(i + 1)}</span><span class="show__name">${s.name}</span><span class="show__when">${s.when}</span></button>
+    <div class="show__more"><div><div class="show__in"><figure><img src="${src(s.img, 800)}" srcset="${srcset(s.img, [480, 800, 1100])}" sizes="100vw" alt="${esc(s.alt)}" loading="lazy" decoding="async"></figure><p class="meta">${s.when}</p><p>${s.desc}</p><div class="hosts">${hostsHTML(s)}</div><a class="more" href="#">Усі випуски <svg class="ic"><use href="#i-arrow"/></svg></a></div></div></div></li>`).join('');
+  setShow(0);
+  const list = $('#showList'), mobile = matchMedia('(max-width:900px)');
+  list.addEventListener('click', e => {
+    const b = e.target.closest('.show'); if (!b) return;
+    if (mobile.matches) { const li = b.parentElement, open = !li.classList.contains('is-open'); $$('li', list).forEach(x => { x.classList.remove('is-open'); $('.show', x).setAttribute('aria-expanded', 'false') }); li.classList.toggle('is-open', open); b.setAttribute('aria-expanded', open) }
+    else setShow(+b.dataset.i);
+  });
+  let hov; list.addEventListener('mouseover', e => { const b = e.target.closest('.show'); if (!b || mobile.matches) return; clearTimeout(hov); hov = setTimeout(() => setShow(+b.dataset.i), 70) });
+  list.addEventListener('focusin', e => { const b = e.target.closest('.show'); if (b && !mobile.matches) setShow(+b.dataset.i) });
+}
+function setShow(i) {
+  if (i === showI) return; showI = i; const s = SHOWS[i];
+  $$('.show').forEach((b, k) => b.classList.toggle('is-on', k === i));
+  const fig = $('#pvFig'), im = new Image();
+  im.sizes = '(max-width:900px) 100vw, 46vw'; im.srcset = srcset(s.img, [600, 900, 1300]); im.src = src(s.img, 900); im.alt = s.alt; im.className = 'out';
+  fig.insertBefore(im, $('#pvCap'));
+  const show = () => requestAnimationFrame(() => { im.classList.remove('out'); $$('img', fig).forEach(x => { if (x !== im) setTimeout(() => x.remove(), 800) }) });
+  (im.decode ? im.decode() : Promise.resolve()).then(show, show);
+  const capEl = $('#pvCap');
+  capEl.innerHTML = `<p class="pv__when">${s.when}</p><h3>${s.name}</h3><p>${s.desc}</p><div class="hosts">${hostsHTML(s)}</div><a class="more" href="#">Усі випуски <svg class="ic"><use href="#i-arrow"/></svg></a>`;
+  capEl.classList.remove('swap'); void capEl.offsetWidth; capEl.classList.add('swap');
+}
+
+/* ================= Подкасти ================= */
+const podPos = PODS.map(() => 0);
+const fmtSec = s => `${pad(Math.floor(s / 60))}:${pad(Math.floor(s % 60))}`;
+function waveSVG(seed) {
+  let x = seed * 9301 + 49297, out = '';
+  const rnd = () => (x = (x * 9301 + 49297) % 233280) / 233280;
+  for (let i = 0; i < 72; i++) { const h = 6 + Math.round((Math.sin(i / 5 + seed) * .35 + .5) * 22 + rnd() * 12); out += `<rect x="${i * 5}" y="${(40 - h) / 2}" width="3" height="${h}" rx="1.5"/>` }
+  return `<svg viewBox="0 0 360 40" preserveAspectRatio="none" fill="currentColor">${out}</svg>`;
+}
+function renderPods() {
+  $('#podList').innerHTML = PODS.map((p, i) => `<li class="pod" data-i="${i}">
+    <button class="pod__play" type="button" aria-label="Слухати: ${esc(p.ep)}"><svg class="ic"><use href="#i-play"/></svg></button>
+    <span class="pod__cover"><img src="${src(p.img, 160)}" alt="" loading="lazy" decoding="async"></span>
+    <div><span class="pod__show">${p.show}</span><span class="pod__ep">${p.ep}</span></div>
+    <div class="pod__wave" role="slider" tabindex="-1" aria-label="Перемотування" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">${waveSVG(i + 1)}<div class="on" style="position:absolute;inset:0">${waveSVG(i + 1)}</div></div>
+    <span class="pod__dur">${p.min} хв</span></li>`).join('');
+  $('#podList').addEventListener('click', e => {
+    const li = e.target.closest('.pod'); if (!li) return; const i = +li.dataset.i;
+    const wv = e.target.closest('.pod__wave');
+    if (wv) { const r = wv.getBoundingClientRect(); podPos[i] = Math.max(0, Math.min(1, (e.clientX - r.left) / r.width)) * PODS[i].min * 60; playPod(i, true); return }
+    if (e.target.closest('.pod__play')) playPod(i);
+  });
+}
+function updPodUI() {
+  $$('.pod').forEach((el, i) => {
+    const playing = PL.mode === 'pod' && PL.pod === i && PL.playing;
+    el.classList.toggle('is-playing', playing);
+    $('.pod__play use', el).setAttribute('href', playing ? '#i-pause' : '#i-play');
+    $('.pod__play', el).setAttribute('aria-label', (playing ? 'Пауза: ' : 'Слухати: ') + PODS[i].ep);
+    const pct = (podPos[i] / (PODS[i].min * 60) * 100).toFixed(2);
+    $('.pod__wave .on', el).style.setProperty('--p', pct + '%'); $('.pod__wave', el).setAttribute('aria-valuenow', Math.round(pct));
+    $('.pod__dur', el).textContent = podPos[i] > 0 ? `${fmtSec(podPos[i])} / ${PODS[i].min}:00` : `${PODS[i].min} хв`;
+  });
+}
+function playPod(i, seek) {
+  if (!seek && PL.mode === 'pod' && PL.pod === i && PL.playing) { plPause(); return }
+  PL.mode = 'pod'; PL.pod = i; plPlay();
+}
+
+/* ================= Липкий радіоплеєр ================= */
+const PL = { playing: false, mode: 'live', pod: -1, song: 0 };
+const pl = $('#player'), plBtn = $('#plPlay'), plNow = $('#plNow'), plSt = $('#plSt'), audio = $('#plAudio');
+$('#eq').innerHTML = Array.from({ length: 12 }, (_, i) => `<i style="--d:${(.55 + ((i * 37) % 9) / 14).toFixed(2)}s;--dl:-${((i * 53) % 10) / 10}s"></i>`).join('');
+let songT = null, podT = null;
+function setNow(text, instant) {
+  if (plNow.textContent === text) return;
+  if (instant || reduce) { plNow.textContent = text; return }
+  plNow.classList.add('fade'); setTimeout(() => { plNow.textContent = text; plNow.classList.remove('fade') }, 300);
+}
+function plRender() {
+  pl.classList.toggle('is-playing', PL.playing); pl.classList.toggle('is-pod', PL.mode === 'pod');
+  plBtn.querySelector('use').setAttribute('href', PL.playing ? '#i-pause' : '#i-play');
+  plBtn.setAttribute('aria-label', PL.playing ? 'Пауза' : (PL.mode === 'pod' ? 'Продовжити подкаст' : 'Слухати радіо наживо'));
+  if (PL.mode === 'live') {
+    const r = cur(RADIO, kyiv().min);
+    plSt.innerHTML = `<span class="dot dot--live"></span><span>Радіо НТК · FM ${esc(CONFIG.fm)} · ${r[2]}</span>`;
+    setNow(PL.playing ? `${SONGS[PL.song][0]} · ${SONGS[PL.song][1]}` : 'Слухати наживо');
+    $('#reqP').textContent = `Ведучий програми «${r[2]}» прочитає привітання в ефірі.`;
+  } else {
+    const p = PODS[PL.pod];
+    plSt.innerHTML = `<span>Подкаст · ${p.show}</span>`;
+    setNow(`${p.ep} · ${fmtSec(podPos[PL.pod])} / ${p.min}:00`, true);
+    $('#plProg').style.setProperty('--p', (podPos[PL.pod] / (p.min * 60)).toFixed(4));
+  }
+  updPodUI();
+}
+function stopTimers() { clearInterval(songT); clearInterval(podT); songT = podT = null }
+function plPlay() {
+  stopTimers();
+  if (watching && !hero.classList.contains('is-paused')) setPausedTV(true);
+  if (PL.mode === 'live' && CONFIG.radioStream) { audio.src = CONFIG.radioStream; audio.volume = $('#plVol').value / 100; audio.play().catch(() => toast('Не вдалося підключитися до потоку. Спробуйте ще раз')) }
+  PL.playing = true;
+  if (PL.mode === 'live') songT = setInterval(() => { PL.song = (PL.song + 1) % SONGS.length; plRender() }, 22000);
+  else podT = setInterval(() => { const max = PODS[PL.pod].min * 60; podPos[PL.pod] += 1; if (podPos[PL.pod] >= max) { podPos[PL.pod] = 0; plPause(); return } plRender() }, 1000);
+  plRender();
+}
+function plPause() { PL.playing = false; stopTimers(); audio.pause(); plRender() }
+plBtn.addEventListener('click', () => PL.playing ? plPause() : plPlay());
+$('#plBack').addEventListener('click', () => { PL.mode = 'live'; plPlay() });
+$('#plVol').addEventListener('input', e => { audio.volume = e.target.value / 100 });
+const req = $('#req'), reqBtn = $('#plReq');
+function setReq(o) { req.classList.toggle('is-open', o); req.inert = !o; reqBtn.setAttribute('aria-expanded', o); if (o) setTimeout(() => $('input', req).focus(), 120) }
+reqBtn.addEventListener('click', () => setReq(!req.classList.contains('is-open')));
+req.addEventListener('submit', e => { e.preventDefault(); if (!req.reportValidity()) return; setReq(false); toast(`Дякуємо! Замовлення передано в студію «${cur(RADIO, kyiv().min)[2]}»`); req.reset() });
+d.addEventListener('click', e => { if (req.classList.contains('is-open') && !e.target.closest('#req') && !e.target.closest('#plReq')) setReq(false) });
+
+/* ================= «Повідом новину» ================= */
+const files = [];
+function addFiles(list) {
+  [...list].forEach(f => {
+    if (files.length >= 10) return;
+    if (!/^(image|video)\//.test(f.type)) { toast(`«${f.name}»: підтримуються лише фото та відео`); return }
+    if (f.size > 500 * 1024 * 1024) { toast(`«${f.name}» завеликий, максимум 500 МБ`); return }
+    files.push({ f, url: f.type.startsWith('image/') ? URL.createObjectURL(f) : null });
+  });
+  drawThumbs();
+}
+function drawThumbs() {
+  $('#thumbs').innerHTML = files.map((x, i) => `<div class="thumb">${x.url ? `<img src="${x.url}" alt="">` : `<span class="thumb__v"><svg class="ic"><use href="#i-play"/></svg>${esc(x.f.name.split('.').pop().toUpperCase())}</span>`}<button type="button" data-i="${i}" aria-label="Прибрати ${esc(x.f.name)}"><svg class="ic"><use href="#i-x"/></svg></button></div>`).join('');
+  $('#dropHint').textContent = files.length ? `Додано файлів: ${files.length} з 10` : 'Перетягніть сюди або натисніть, щоб обрати · до 10 файлів';
+}
+const rpanel = $('#rpanel'), rformHTML = rpanel.innerHTML;
+function bindReport() {
+  const dr = $('.drop', rpanel), fi = $('#fileIn');
+  ['dragenter', 'dragover'].forEach(ev => dr.addEventListener(ev, e => { e.preventDefault(); dr.classList.add('is-over') }));
+  ['dragleave', 'drop'].forEach(ev => dr.addEventListener(ev, e => { e.preventDefault(); dr.classList.remove('is-over') }));
+  dr.addEventListener('drop', e => addFiles(e.dataTransfer.files));
+  fi.addEventListener('change', () => { addFiles(fi.files); fi.value = '' });
+  $('#thumbs').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; const x = files.splice(+b.dataset.i, 1)[0]; if (x && x.url) URL.revokeObjectURL(x.url); drawThumbs() });
+  $('#rform').addEventListener('submit', e => {
+    e.preventDefault(); const f = e.target;
+    const what = f.elements.what;
+    if (!what.value.trim()) { what.focus(); toast('Опишіть, будь ласка, що сталося'); return }
+    /* Тут: POST multipart/form-data на бекенд редакції (текст + files[].f) */
+    rpanel.innerHTML = `<div class="rdone" role="status"><svg class="big" aria-hidden="true"><use href="#i-star"/></svg><h3>Дякуємо! Повідомлення вже в редакції.</h3><p>Черговий редактор перегляне його найближчим часом${files.length ? `, разом з ${files.length} файл(ами)` : ''}. Якщо ви залишили контакт, ми зателефонуємо, щоб уточнити деталі.</p><button class="btn btn--line" type="button" id="rAgain">Надіслати ще одне</button></div>`;
+    files.forEach(x => x.url && URL.revokeObjectURL(x.url)); files.length = 0;
+    $('#rAgain').addEventListener('click', () => { rpanel.innerHTML = rformHTML; bindReport(); $('#rform textarea').focus() });
+  });
+}
+bindReport();
+
+/* ================= Погода (Open-Meteo, без ключа) ================= */
+function wx(c) {
+  if (c === 0) return ['w-sun', 'Ясно']; if (c === 1) return ['w-part', 'Переважно ясно']; if (c === 2) return ['w-part', 'Мінлива хмарність'];
+  if (c === 3) return ['w-cloud', 'Хмарно']; if (c === 45 || c === 48) return ['w-fog', 'Туман']; if (c >= 51 && c <= 57) return ['w-rain', 'Мряка'];
+  if (c === 61 || c === 63) return ['w-rain', 'Дощ']; if (c === 65) return ['w-rain', 'Сильний дощ']; if (c === 66 || c === 67) return ['w-rain', 'Крижаний дощ'];
+  if (c === 71 || c === 73) return ['w-snow', 'Сніг']; if (c === 75) return ['w-snow', 'Сильний сніг']; if (c === 77) return ['w-snow', 'Снігова крупа'];
+  if (c >= 80 && c <= 82) return ['w-rain', 'Зливи']; if (c === 85 || c === 86) return ['w-snow', 'Снігопад']; if (c === 95) return ['w-storm', 'Гроза'];
+  if (c === 96 || c === 99) return ['w-storm', 'Гроза з градом']; return ['w-cloud', 'Хмарно'];
+}
+const WX_BG = { 'w-sun': P.hoverla, 'w-part': P.greenMtn, 'w-cloud': P.ridges, 'w-fog': P.fog3, 'w-rain': P.riverForest, 'w-snow': P.snowForest, 'w-storm': P.fog2 };
+const fmtT = v => { const r = Math.round(v); return (r > 0 ? '+' : r < 0 ? '−' : '') + Math.abs(r) + '°' };
+function fallbackWx() {
+  const time = [], base = Date.now();
+  for (let i = 0; i < 7; i++) time.push(new Date(base + i * 864e5).toISOString().slice(0, 10));
+  return [{ current: { temperature_2m: 4, apparent_temperature: 1, relative_humidity_2m: 84, wind_speed_10m: 3, weather_code: 3 }, daily: { time, weather_code: [3, 61, 71, 3, 2, 0, 3], temperature_2m_max: [6, 5, 2, 3, 5, 7, 6], temperature_2m_min: [0, 1, -2, -3, -1, 0, 1], sunrise: [time[0] + 'T07:19'], sunset: [time[0] + 'T16:31'] } },
+    { current: { temperature_2m: -6, weather_code: 71, wind_speed_10m: 12 } }];
+}
+function renderWeather(w, m, demo) {
+  const c = w.current, [ic, txt] = wx(c.weather_code);
+  $('#wxDate').textContent = todayLong();
+  $('#wxTemp').textContent = fmtT(c.temperature_2m);
+  $('#wxIcon').innerHTML = `<use href="#${ic}"/>`;
+  $('#wxCond').textContent = txt;
+  $('#wxFeel').textContent = `Відчувається як ${fmtT(c.apparent_temperature)}`;
+  $('#wxWind').textContent = `${Math.round(c.wind_speed_10m)} м/с`;
+  $('#wxHum').textContent = `${Math.round(c.relative_humidity_2m)}%`;
+  $('#wxRise').textContent = 'Схід ' + w.daily.sunrise[0].slice(11, 16);
+  $('#wxSet').textContent = 'Захід ' + w.daily.sunset[0].slice(11, 16);
+  const dn = new Intl.DateTimeFormat('uk-UA', { weekday: 'short', timeZone: 'UTC' });
+  $('#wxDays').innerHTML = w.daily.time.map((t, i) => { const [di] = wx(w.daily.weather_code[i]); return `<div class="wx__day"><span>${i === 0 ? 'Сьогодні' : cap(dn.format(new Date(t + 'T12:00:00Z')))}</span><svg aria-hidden="true"><use href="#${di}"/></svg><b>${fmtT(w.daily.temperature_2m_max[i])}</b><span>${fmtT(w.daily.temperature_2m_min[i])}</span></div>` }).join('');
+  if (m) { const [, mt] = wx(m.current.weather_code); $('#wxMtn').innerHTML = `<svg class="ic"><use href="#i-mtn"/></svg><span><b>Говерла, 2061 м:</b> ${fmtT(m.current.temperature_2m)}, ${mt.toLowerCase()}, вітер ${Math.round(m.current.wind_speed_10m)} м/с. Плануєте похід? Перевірте прогноз рятувальників.</span>` }
+  else $('#wxMtn').hidden = true;
+  const bg = $('#wxBg'); bg.style.opacity = 0; setTimeout(() => { bg.src = src(WX_BG[ic] || P.ridges, 1200); bg.onload = () => bg.style.opacity = ''; }, 300);
+  $('#wxSrc').textContent = demo ? 'Демо-дані: прогноз зараз недоступний' : `Дані: Open-Meteo · оновлено о ${hhmm(kyiv().min)}`;
+}
+async function loadWeather() {
+  const base = 'https://api.open-meteo.com/v1/forecast?timezone=Europe%2FKyiv&wind_speed_unit=ms';
+  const u1 = `${base}&latitude=${CONFIG.weather.lat}&longitude=${CONFIG.weather.lon}&current=temperature_2m,apparent_temperature,relative_humidity_2m,wind_speed_10m,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min,sunrise,sunset&forecast_days=7`;
+  const u2 = `${base}&latitude=48.1603&longitude=24.5003&elevation=2061&current=temperature_2m,weather_code,wind_speed_10m`;
+  const ctrl = 'AbortController' in window ? new AbortController() : null; const to = setTimeout(() => ctrl && ctrl.abort(), 9000);
+  const get = u => fetch(u, ctrl ? { signal: ctrl.signal } : {}).then(r => { if (!r.ok) throw new Error(r.status); return r.json() });
+  try {
+    const [a, b] = await Promise.allSettled([get(u1), get(u2)]);
+    if (a.status !== 'fulfilled') throw new Error('wx');
+    renderWeather(a.value, b.status === 'fulfilled' ? b.value : null, false);
+  } catch (e) { const [w, m] = fallbackWx(); renderWeather(w, m, true) }
+  clearTimeout(to);
+}
+
+/* ================= Мапа покриття для рекламодавців ================= */
+function renderMap() {
+  const C = 300, K = 4.3, X = x => +(C + x * K).toFixed(1), Y = y => +(C + y * K).toFixed(1);
+  const towns = [['Снятин', 38, 6], ['Городенка', 30, -28], ['Заболотів', 22, -2], ['Гвіздець', 12, -13], ['Отинія', -2, -19], ['Печеніжин', -12, 9], ['Яблунів', -5, 20], ['Косів', 8, 30], ['Делятин', -33, -2], ['Надвірна', -45, -15], ['Яремче', -42, 14], ['Верховина', -24, 50], ['Івано-Франківськ', -36, -42]];
+  const riv = [[-62, 22], [-46, 13], [-33, 4], [-18, 2], [0, 0], [14, 4], [26, 3], [40, 8], [62, 11]];
+  let rp = `M${X(riv[0][0])} ${Y(riv[0][1])}`;
+  for (let i = 1; i < riv.length - 1; i++) { const mx = (riv[i][0] + riv[i + 1][0]) / 2, my = (riv[i][1] + riv[i + 1][1]) / 2; rp += ` Q${X(riv[i][0])} ${Y(riv[i][1])} ${X(mx)} ${Y(my)}` }
+  rp += ` L${X(riv.at(-1)[0])} ${Y(riv.at(-1)[1])}`;
+  const mtns = [[-34, 32], [-44, 26], [-16, 40], [-52, 40], [-8, 46], [-28, 42], [-40, 38]].map(([x, y]) => `<path class="mtn" d="M${X(x) - 10} ${Y(y) + 7}L${X(x)} ${Y(y) - 8}L${X(x) + 10} ${Y(y) + 7}"/>`).join('');
+  const rings = [20, 40, 60].map(km => `<circle class="ring" cx="${C}" cy="${C}" r="${km * K}"/><text class="ringlbl" x="${(C + km * K * .707 + 5).toFixed(1)}" y="${(C + km * K * .707 + 4).toFixed(1)}">${km} км</text>`).join('');
+  const tw = towns.map(([n, x, y]) => { const km = Math.round(Math.hypot(x, y)), left = x < -2; return `<g class="town" tabindex="0" role="button" data-n="${n}" data-km="${km}" aria-label="${n}, ${km} кілометрів від студії" transform="translate(${X(x)} ${Y(y)})"><circle r="4.5"/><text x="${left ? -9 : 9}" y="4.5" text-anchor="${left ? 'end' : 'start'}">${n}</text></g>` }).join('');
+  $('#map').innerHTML = `<svg viewBox="0 0 600 600" role="img" aria-labelledby="mapT"><title id="mapT">Схема зони мовлення НТК навколо Коломиї (орієнтовно)</title>
+    <defs><radialGradient id="mapGlow"><stop offset="0" stop-color="var(--signal)" stop-opacity=".2"/><stop offset="1" stop-color="var(--signal)" stop-opacity="0"/></radialGradient></defs>
+    <circle class="glow" cx="${C}" cy="${C}" r="${62 * K}"/>${rings}
+    <circle class="pulse" cx="${C}" cy="${C}" r="${62 * K}"/><circle class="pulse p2" cx="${C}" cy="${C}" r="${62 * K}"/><circle class="pulse p3" cx="${C}" cy="${C}" r="${62 * K}"/>
+    <path class="river" d="${rp}"/><text class="rlbl" x="${X(18)}" y="${Y(13)}">р. Прут</text>
+    ${mtns}<text class="mlbl" x="${X(-52)}" y="${Y(32)}" text-anchor="middle">Карпати</text>
+    ${tw}
+    <g class="home" transform="translate(${C} ${C})"><use href="#i-star" x="-15" y="-15" width="30" height="30"/><text y="-22" text-anchor="middle">Коломия</text></g></svg>`;
+  const capEl = $('#mapCap');
+  const show = g => { $$('.town.on').forEach(x => x.classList.remove('on')); if (!g) return; g.classList.add('on'); capEl.innerHTML = `<b>${g.dataset.n}</b> · ${g.dataset.km} км від студії · ТБ, радіо й онлайн` };
+  $('#map').addEventListener('mouseover', e => show(e.target.closest('.town')));
+  $('#map').addEventListener('focusin', e => show(e.target.closest('.town')));
+  $('#map').addEventListener('click', e => show(e.target.closest('.town')));
+}
+const adC = $('#adCollapse'), adT = $('#adToggle'), adF = $('#adform');
+adT.addEventListener('click', () => { const o = !adC.classList.contains('is-open'); adC.classList.toggle('is-open', o); adF.inert = !o; adT.setAttribute('aria-expanded', o); if (o) setTimeout(() => adF.elements.name.focus({ preventScroll: true }), 350) });
+adF.addEventListener('submit', e => { e.preventDefault(); if (!adF.reportValidity()) return; toast('Запит надіслано. Менеджер рекламного відділу зв’яжеться з вами протягом дня'); adF.reset(); adC.classList.remove('is-open'); adF.inert = true; adT.setAttribute('aria-expanded', 'false') });
+$('#nl').addEventListener('submit', e => { e.preventDefault(); if (!e.target.reportValidity()) return; toast('Майже готово: підтвердіть підписку в листі, який ми щойно надіслали'); e.target.reset() });
+
+/* ================= Орнамент-«безконечник» між секціями ================= */
+function drawWaves() {
+  $$('.wave').forEach(svg => {
+    const w = Math.round(svg.clientWidth || 1200), h = 26, mid = 13, amp = 6, per = 36;
+    let p = `M0 ${mid}`, dots = '';
+    for (let x = 0; x < w; x += per) {
+      p += ` Q${x + per / 4} ${mid - amp} ${x + per / 2} ${mid} T${x + per} ${mid}`;
+      if ((x / per) % 2 === 0) { const cx = x + per / 4, cy = mid - amp - 5; dots += `<path d="M${cx} ${cy - 2.2}l2.2 2.2-2.2 2.2-2.2-2.2z"/>` }
+    }
+    svg.setAttribute('viewBox', `0 0 ${w} ${h}`);
+    svg.innerHTML = `<path class="w-line" d="${p}"/><g class="w-dots">${dots}</g>`;
+    const len = Math.ceil($('.w-line', svg).getTotalLength()); svg.style.setProperty('--len', len);
+  });
+}
+
+/* ================= Поява при скролі ================= */
+function observe() {
+  const els = $$('.rv, .wave');
+  if (!('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('in')); return }
+  const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target) } }), { rootMargin: '0px 0px -8% 0px', threshold: .08 });
+  els.forEach(e => io.observe(e));
+}
+
+/* ================= Клавіатура ================= */
+addEventListener('keydown', e => {
+  if (e.key !== 'Escape') return;
+  if (req.classList.contains('is-open')) { setReq(false); reqBtn.focus(); return }
+  if (menuOpen) { setMenu(false); burger.focus(); return }
+  if (watching) stopWatch();
+});
+
+/* ================= Старт ================= */
+runIntro();
+tickClock(); renderOnAir(); renderTicker(); renderFeed(); renderAir(true); renderVod(); renderShows(); renderPods(); renderMap(); plRender(); drawWaves(); observe(); loadWeather();
+setInterval(tickClock, 1000);
+setInterval(() => {
+  renderOnAir();
+  const t = Math.floor(kyiv().min);
+  if (t !== lastAirMin && !$('#air').contains(d.activeElement)) renderAir();
+  if (!PL.playing) plRender();
+}, 20000);
+let rT; addEventListener('resize', () => { clearTimeout(rT); rT = setTimeout(() => { drawWaves(); renderAir() }, 200) });
+})();
+</script>
+</body>
+</html>
